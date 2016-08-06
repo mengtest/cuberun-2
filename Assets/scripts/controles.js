@@ -26,5 +26,12 @@ function Update () {
 	
 	}	
 	}
+	//Controladores alternativos para el testeo en el ordenador.
+	if(Input.GetKey(KeyCode.RightArrow)){
+	jugador.transform.Translate(Vector3(0, 0, -velocidad));	
+	}
+	if(Input.GetKey(KeyCode.LeftArrow)){
+	jugador.transform.Translate(Vector3(0, 0, velocidad));	
+	}
 
 }

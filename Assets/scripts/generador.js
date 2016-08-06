@@ -3,7 +3,7 @@
 var preset1 : GameObject;
 var preset2 : GameObject;
 var preset3 : GameObject;
-var i = 200;
+private var i = 30;
 private var X = 0;
 
 function Start () {
@@ -16,8 +16,9 @@ function Update () {
 
 function generar(){
 	while(i >0){
-	var rand = Random.Range(1, 3);
+	var rand = Random.Range(1, 4);
 	var gene : GameObject;
+	print(rand);
 	
 		if(rand == 1){
 		gene = preset1;
@@ -31,6 +32,7 @@ function generar(){
 	
 	Instantiate(gene, new Vector3(X, 46.5, 0), Quaternion.identity);
 	i = i - 1;
+	X = X + 40;
 	}
 	//generar2();
 
