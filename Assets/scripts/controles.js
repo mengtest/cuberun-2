@@ -4,14 +4,13 @@ import System.Collections.Generic;
 
 var jugador:GameObject;
 
-private var velocidad = 0.2;
+private var velocidad = 0.14;
 
 function Start () {
 
 }
 
 function Update () {
-print(Input.touchCount);
 	var hit:RaycastHit;
 	var ray:Ray =Camera.main.ScreenPointToRay (Input.mousePosition);
 
