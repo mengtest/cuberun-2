@@ -2,9 +2,7 @@
 import UnityEngine.UI;
 import System.Collections.Generic;
 
-var Control:GameObject;
 var jugador:GameObject;
-var texto: UI.Text;
 
 private var velocidad = 0.2;
 
