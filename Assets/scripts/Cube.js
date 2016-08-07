@@ -11,7 +11,7 @@ function Start () {
 function Update () {
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad, 0));
-		velocidad = velocidad * 1.0012;
+		velocidad = velocidad * 1.00012;
 	}
 	
 	var hit:RaycastHit;
@@ -20,9 +20,9 @@ function Update () {
 	
 	//var ray:Ray = Vector3(this.position, this.position, this.position);
 	//Para hacer experimentos y ajustar los raycast.
-	Debug.DrawRay(transform.position, izquierda, Color.red, 2);
-	Debug.DrawRay(transform.position, derecha, Color.green, 2);
-	Debug.DrawRay(Vector3(transform.position.x + 0.51, transform.position.y, transform.position.z -0.47), Vector3(0, 0, 0.81), Color.blue, 0.1);
+	Debug.DrawRay(transform.position, izquierda, Color.red, 4);
+	Debug.DrawRay(transform.position, derecha, Color.green, 4);
+	Debug.DrawRay(Vector3(transform.position.x + 0.51, transform.position.y, transform.position.z -0.47), Vector3(0, 0, 0.81), Color.blue, 0.01);
 	
 	if(Physics.Raycast(Vector3(transform.position.x + 0.51, transform.position.y, transform.position.z -0.47), Vector3(0, 0, 1), hit, 0.81)){
 		if(hit.collider.transform.tag == "pared"){
@@ -46,7 +46,6 @@ function Update () {
 }
 
 function fin(){
-print("fin");
-//gameObject.Find("Main Camera").gameObject.GetComponent(Animation).Play();
 mover = false;
+gameObject.Find("Canvas").GetComponent(puntuaciones).fin();
 }
