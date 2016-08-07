@@ -35,14 +35,14 @@ function Update () {
 	//Controladores alternativos para el testeo en el ordenador.
 	if(Input.GetKey(KeyCode.RightArrow)){
 	if(enableRight == true){
-	jugador.transform.Translate(Vector3(0, 0, -velocidad));
+	jugador.transform.Translate(Vector3(0, 0, -velocidad), Space.World);
 	giro(1);	
 	}else{
 	giro(0);
 	}}
 	if(Input.GetKey(KeyCode.LeftArrow)){
 	if(enableLeft == true){
-	jugador.transform.Translate(Vector3(0, 0, velocidad));
+	jugador.transform.Translate(Vector3(0, 0, velocidad), Space.World);
 	giro(2);	
 	}else{
 	giro(0);
@@ -53,15 +53,15 @@ function Update () {
 function giro(sentido : int){ //1 es derecha, 2 es izquierda.
 	if(sentido == 1){
 		i = Mathf.Lerp(i, 20, 6 * Time.deltaTime);
-		jugador.transform.eulerAngles = Vector3(0, i, 0);
+		jugador.transform.eulerAngles = Vector3(-i, i, 0);
 		
 	}else if(sentido == 2){
-		jugador.transform.eulerAngles = Vector3(0, i, 0);
+		jugador.transform.eulerAngles = Vector3(-i, i, 0);
 		i = Mathf.Lerp(i, -20, 6 * Time.deltaTime);
 		
 	}else{
 		i = Mathf.Lerp(i, 0, 6 * Time.deltaTime);
-		jugador.transform.eulerAngles = Vector3(0, i, 0);
+		jugador.transform.eulerAngles = Vector3(-i, i, 0);
 	}
 	
 	
