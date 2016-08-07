@@ -6,7 +6,7 @@ function OnTriggerEnter(col : Collider){
 	if(col.tag == "pared"){
 		rand = Random.Range(1, 11);
 		col.GetComponent(Animation).Play();
-	
+		sonido(col);
 		if(rand < 10){
 			miniup(col);
 		}
@@ -19,8 +19,8 @@ function miniup(col : Collider){
 	col.GetComponent(Animation).Play("miniup");
 }
 
-function sonido(){
+function sonido(col : Collider){
 	
-	//this.gameObject.GetComponent(AudioSource).pitch -= Time.deltaTime * 5 / 5;	
+	this.gameObject.GetComponent(AudioSource).pitch = col.GetComponent(Transform).position.z * 1.2;	
 	this.gameObject.GetComponent(AudioSource).Play();
 }
