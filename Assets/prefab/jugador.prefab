@@ -88,7 +88,7 @@ GameObject:
   - 23: {fileID: 2356920}
   - 114: {fileID: 11452662}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: animador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,8 +148,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.49861717, y: 32.21875, z: -.809840441}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 469230}
+  m_Children: []
   m_Father: {fileID: 461624}
   m_RootOrder: 1
 --- !u!4 &467564
@@ -163,6 +162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469566}
+  - {fileID: 469230}
   m_Father: {fileID: 461624}
   m_RootOrder: 0
 --- !u!4 &469230
@@ -171,12 +171,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164714}
-  m_LocalRotation: {x: 0, y: .449755996, z: 0, w: .893151522}
-  m_LocalPosition: {x: 20.1399994, y: 0, z: 4}
-  m_LocalScale: {x: .45337823, y: 2.32500029, z: 33.0460129}
+  m_LocalRotation: {x: -.346978396, y: .114514664, z: -.0400387011, w: .929994226}
+  m_LocalPosition: {x: 12.5229998, y: 8.57619953, z: 28.2959995}
+  m_LocalScale: {x: .288400948, y: 2.32500029, z: 33.0460129}
   m_Children: []
-  m_Father: {fileID: 462844}
-  m_RootOrder: 0
+  m_Father: {fileID: 467564}
+  m_RootOrder: 1
 --- !u!4 &469566
 Transform:
   m_ObjectHideFlags: 1
@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e076b2650694784c85eec6e3eec30de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rand: 0
 --- !u!114 &11460542
 MonoBehaviour:
   m_ObjectHideFlags: 1
