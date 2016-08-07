@@ -11,7 +11,7 @@ mover = true;
 function Update () {
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad, 0), Space.World);
-		velocidad = velocidad * 1.00012;
+		velocidad = velocidad * 1.00032;
 	}
 	
 	var hit:RaycastHit;
