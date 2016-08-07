@@ -7,7 +7,7 @@ var preset2 : GameObject;
 var preset3 : GameObject;
 var preset4 : GameObject;
 
-private var i = 30;
+private var i = 70;
 private var X = 0;
 
 function Start () {

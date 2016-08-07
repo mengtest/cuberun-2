@@ -47,6 +47,9 @@ function recordfunc(){
 
 function fin(){
 	if(puntos > record){
-		//PlayerPrefs.SetInt("record", puntos);
+		PlayerPrefs.SetInt("record", puntos);
 	}
+	yield WaitForSeconds(3);
+	Cube.mover = true;
+	Application.LoadLevel("menu");
 }

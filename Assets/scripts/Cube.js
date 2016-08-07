@@ -5,7 +5,7 @@ static var velocidad = 0.08;
 static var mover : boolean = true;
 
 function Start () {
-
+mover = true;
 }
 
 function Update () {
@@ -47,5 +47,5 @@ function Update () {
 
 function fin(){
 mover = false;
-gameObject.Find("Canvas").GetComponent(puntuaciones).fin();
+gameObject.Find("canvas").GetComponent(puntuaciones).fin();
 }
