@@ -22,7 +22,6 @@ function generar(){
 	while(i >0){
 	var rand = Random.Range(1, 5);
 	var gene : GameObject;
-	print(rand);
 	
 		if(rand == 1){
 		gene = preset1;
