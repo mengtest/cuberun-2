@@ -1,8 +1,12 @@
 ﻿#pragma strict
 
+var variatorZ = 0.0;
+
 var preset1 : GameObject;
 var preset2 : GameObject;
 var preset3 : GameObject;
+var preset4 : GameObject;
+
 private var i = 30;
 private var X = 0;
 
@@ -16,7 +20,7 @@ function Update () {
 
 function generar(){
 	while(i >0){
-	var rand = Random.Range(1, 4);
+	var rand = Random.Range(1, 5);
 	var gene : GameObject;
 	print(rand);
 	
@@ -29,8 +33,11 @@ function generar(){
 		if(rand == 3){
 		gene = preset3;
 		}
+		if(rand == 4){
+		gene = preset4;
+		}
 	
-	Instantiate(gene, new Vector3(X, 46.5, 0), Quaternion.identity);
+	Instantiate(gene, new Vector3(X, 46.5, variatorZ), Quaternion.identity);
 	i = i - 1;
 	X = X + 40;
 	}

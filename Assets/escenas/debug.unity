@@ -10243,10 +10243,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 666896234}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &694018129
-GameObject:
-  m_PrefabParentObject: {fileID: 155822, guid: 32ec9fd435da4314d97ee744b8b0c389, type: 2}
-  m_PrefabInternal: {fileID: 1009084816}
 --- !u!1 &697346081
 GameObject:
   m_ObjectHideFlags: 0
@@ -21721,7 +21717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3eaa475068637429b4125ac4ca694a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador: {fileID: 694018129}
 --- !u!1 &1615125413
 GameObject:
   m_ObjectHideFlags: 0

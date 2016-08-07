@@ -31,6 +31,7 @@ GameObject:
   - 124: {fileID: 12490460}
   - 81: {fileID: 8155758}
   - 114: {fileID: 11491378}
+  - 111: {fileID: 11115378}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -68,6 +69,7 @@ GameObject:
   - 65: {fileID: 6501800}
   - 23: {fileID: 2380654}
   - 114: {fileID: 11460542}
+  - 114: {fileID: 11458784}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -132,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.2000008, y: -32.2000008, z: 2.5999999}
+  m_LocalPosition: {x: -18.2000008, y: 3.79999995, z: 2.5999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467564}
@@ -433,6 +435,21 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127508}
   m_Enabled: 1
+--- !u!111 &11115378
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127508}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: ad86df77ee8e8c241977499926516534, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: ad86df77ee8e8c241977499926516534, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11434288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -457,6 +474,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rand: 0
+--- !u!114 &11458784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce10fd6a4db4054789ec25c01604ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preset1: {fileID: 178292, guid: 0c44249fc38850544b171e56f06933e0, type: 2}
+  preset2: {fileID: 170368, guid: 089479c745e887b4292cbccbe92e6325, type: 2}
+  preset3: {fileID: 157620, guid: 3073791f04192e1468f7dcb3b4d36401, type: 2}
+  preset4: {fileID: 176976, guid: f950dc411e6d2c040bc7caf4637dc5ea, type: 2}
 --- !u!114 &11460542
 MonoBehaviour:
   m_ObjectHideFlags: 1
