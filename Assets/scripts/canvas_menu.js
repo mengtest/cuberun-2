@@ -23,6 +23,7 @@ function iniciar (){
 }
 
 function menu(){
+Cube.velocidad = 0.1;
 Application.LoadLevel("menu");
 }
 

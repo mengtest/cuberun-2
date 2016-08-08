@@ -9,7 +9,7 @@ var contadorGalletas : GameObject;
 private var velocidadpuntos = 1.2;
 
 function Start(){
-	PlayerPrefs.SetInt("record", 5);
+	//PlayerPrefs.SetInt("record", 5);
 	record = PlayerPrefs.GetInt("record");
 	esperarpuntos();
 	recordfunc();
