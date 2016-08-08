@@ -4,6 +4,7 @@
 static var velocidad = 0.08;
 static var mover : boolean = true;
 
+
 function Start () {
 mover = true;
 }

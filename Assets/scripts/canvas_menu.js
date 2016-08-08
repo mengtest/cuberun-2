@@ -15,7 +15,11 @@ var FIN_canvas : GameObject;
 function iniciar (){
 
 	Application.LoadLevel("nvl1");
+	Cube.velocidad = 0.1;
+	informacion.SetActive(true);
+	FIN_canvas.SetActive(false);
 	informacion.GetComponent(Animation).Play("informaciones_in");
+	PlayerPrefs.SetInt("record", 5);
 }
 
 function menu(){
@@ -24,9 +28,22 @@ Application.LoadLevel("menu");
 
 function acabado(){
 	if(FIN_canvas.active == false){
+		var galletasTotales : int = PlayerPrefs.GetInt("galletas") + puntuaciones.galletas;
+		
 		informacion.GetComponent(Animation).Play("informaciones_out");
 		FIN_canvas.SetActive(true);
 		FIN_canvas.GetComponent(Animation).Play();
+		FIN_canvas.gameObject.transform.FindChild("puntuacion").GetComponent(Text).text = "Puntuacion " + puntuaciones.puntos;
+		if(puntuaciones.puntos >= PlayerPrefs.GetInt("record")){
+			FIN_canvas.transform.FindChild("recordmsg").gameObject.active = true;
+		}else{
+			FIN_canvas.transform.FindChild("recordmsg").gameObject.active = false;
+		}
+		FIN_canvas.gameObject.transform.FindChild("galletas").GetComponent(Text).text = "Galletas recogidas " + puntuaciones.galletas; 
+		FIN_canvas.gameObject.transform.FindChild("galletas_totales").GetComponent(Text).text = "Totales: " + galletasTotales;
+		PlayerPrefs.SetInt("galletas", galletasTotales);
+		
+		
 		//gameObject.Find("Main Camera").GetComponents(unityStandardAssets.Effects.ImageEffects.DepthOfField).enabled = true;
 	}
 }

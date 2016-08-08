@@ -1,12 +1,14 @@
 ﻿#pragma strict
 
-var puntos : int = 0;
+static var puntos : int = 0;
+static var galletas = 0;
 private var record : int;
 var contadorPuntos : GameObject;
 var contadorRecord : GameObject;
 private var velocidadpuntos = 1.2;
 
 function Start(){
+	PlayerPrefs.SetInt("record", 5);
 	record = PlayerPrefs.GetInt("record");
 	esperarpuntos();
 	recordfunc();
