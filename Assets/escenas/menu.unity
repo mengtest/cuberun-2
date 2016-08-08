@@ -190,7 +190,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 918808329}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 201, y: -373}
@@ -362,13 +362,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 170076463}
+  - 114: {fileID: 170076464}
   m_Layer: 5
   m_Name: tienda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &170076463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -385,12 +386,32 @@ RectTransform:
   - {fileID: 2109196289}
   - {fileID: 1914129981}
   m_Father: {fileID: 918808329}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &170076464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170076462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f220fa58647ee644a85cb82c28a3380a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtDinero: {fileID: 1256849025}
+  btnMejorarGiro: {fileID: 974793629}
+  txtNivelGiro: {fileID: 543099530}
+  btnWrite: {fileID: 1760679443}
+  btnYellow: {fileID: 1082894707}
+  btnYellowgreen: {fileID: 562445961}
+  btnGreen: {fileID: 1834341193}
+  btnCyan: {fileID: 348594532}
+  btnBlue: {fileID: 1879057731}
 --- !u!1 &194765007
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '150$
+  m_Text: '35$
 
     COMPRAR'
 --- !u!222 &240292272
@@ -664,7 +685,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 348594535}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170076464}
+        m_MethodName: comprarousar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1117803191}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &348594535
@@ -1034,7 +1067,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '150$
+  m_Text: '90$
 
     COMPRAR'
 --- !u!222 &452132924
@@ -1069,8 +1102,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 974793630}
+  m_Children: []
   m_Father: {fileID: 1914129981}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
@@ -1184,7 +1216,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 562445964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170076464}
+        m_MethodName: comprarousar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 761207618}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &562445964
@@ -1393,7 +1437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '150$
+  m_Text: '20$
 
     COMPRAR'
 --- !u!222 &603328587
@@ -1527,7 +1571,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: USANDO
+  m_Text: USAR
 --- !u!222 &604460481
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1789,7 +1833,7 @@ RectTransform:
   m_LocalScale: {x: 6.9744153, y: 2.24072695, z: 2.24072695}
   m_Children: []
   m_Father: {fileID: 918808329}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 6, y: 418}
@@ -1903,7 +1947,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 918808329}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -195, y: -373}
@@ -2037,12 +2081,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 170076463}
   - {fileID: 704280310}
   - {fileID: 1416726775}
   - {fileID: 854023573}
   - {fileID: 57273681}
   - {fileID: 1878695126}
-  - {fileID: 170076463}
   - {fileID: 1561374555}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2172,11 +2216,11 @@ RectTransform:
   m_LocalScale: {x: .499041498, y: .499041498, z: .499041498}
   m_Children:
   - {fileID: 608775701}
-  m_Father: {fileID: 543099531}
-  m_RootOrder: 0
+  m_Father: {fileID: 1914129981}
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -201, y: -328}
+  m_AnchoredPosition: {x: 47.9999695, y: -642}
   m_SizeDelta: {x: 1447, y: 616}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &974793631
@@ -2217,7 +2261,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 974793632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170076464}
+        m_MethodName: mejoragiro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &974793632
@@ -2448,7 +2504,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1082894710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170076464}
+        m_MethodName: comprarousar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 659017271}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: yellow
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1082894710
@@ -2612,7 +2680,7 @@ GameObject:
   - 222: {fileID: 1256849028}
   - 114: {fileID: 1256849027}
   m_Layer: 5
-  m_Name: title_colorespersonajetxt
+  m_Name: dinero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2697,7 +2765,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 918808329}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 16, y: -26}
@@ -3086,7 +3154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '150$
+  m_Text: '60$
 
     COMPRAR'
 --- !u!222 &1543767999
@@ -3636,7 +3704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1760679446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170076464}
+        m_MethodName: comprarousar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1669581675}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1760679446
@@ -3740,7 +3820,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1834341196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170076464}
+        m_MethodName: comprarousar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 162068472}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1834341196
@@ -3858,7 +3950,7 @@ RectTransform:
   m_LocalScale: {x: .284949243, y: .284949213, z: .284949213}
   m_Children: []
   m_Father: {fileID: 918808329}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: .5, y: 0}
   m_AnchoredPosition: {x: .00128173828, y: 39}
@@ -3970,7 +4062,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1879057734}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 170076464}
+        m_MethodName: comprarousar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 194765007}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1879057734
@@ -4059,7 +4163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '150$
+  m_Text: '80$
 
     COMPRAR'
 --- !u!222 &1902025551
@@ -4095,6 +4199,7 @@ RectTransform:
   m_Children:
   - {fileID: 981660276}
   - {fileID: 543099531}
+  - {fileID: 974793630}
   m_Father: {fileID: 170076463}
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
