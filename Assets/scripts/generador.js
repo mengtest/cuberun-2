@@ -37,6 +37,7 @@ function generar(){
 		}
 	
 	Instantiate(gene, new Vector3(X, 46.5, variatorZ), Quaternion.identity);
+	Instantiate(gene, new Vector3(X, 45.5, variatorZ), Quaternion.identity);
 	i = i - 1;
 	X = X + 40;
 	}

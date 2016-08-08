@@ -3,12 +3,12 @@
 var rand : int;
 
 function Start(){
-	rand = Random.Range(0, 10);
+	/*rand = Random.Range(0, 10);
 	if(rand == 0){
 		GetComponent(Renderer).material.color = Color.green;
 	}
 	if(rand == 1){
-		GetComponent(Renderer).material.color = Color.blue;
+		GetComponent(Renderer).material.color = Color(231, 138, 0);
 	}
 	if(rand == 2){
 		GetComponent(Renderer).material.color = Color.white;
@@ -20,7 +20,7 @@ function Start(){
 		GetComponent(Renderer).material.color = Color.white;
 	}
 	if(rand == 5){
-		GetComponent(Renderer).material.color = Color.magenta;
+		GetComponent(Renderer).material.color = Color(231, 138, 0);
 	}
 	if(rand == 6){
 		GetComponent(Renderer).material.color = Color.green;
@@ -33,5 +33,5 @@ function Start(){
 	}
 	if(rand == 9){
 		GetComponent(Renderer).material.color = Color.cyan;
-	}
+	}*/
 }
