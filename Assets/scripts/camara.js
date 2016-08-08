@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 function Start () {
-
+	var music = PlayerPrefs.GetInt("music");
 }
 
 function Update () {

@@ -30,8 +30,10 @@ function sumarpuntos(){
 }
 function esperarpuntos(){
 	yield WaitForSeconds(velocidadpuntos);
+	
 	sumarpuntos();
 	velocidadpuntos = velocidadpuntos * 0.994;
+	
 }
 
 function recordfunc(){
