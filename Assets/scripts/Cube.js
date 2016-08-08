@@ -40,13 +40,26 @@ function Update () {
 	if(Physics.Raycast(transform.position, derecha, hit, 0.51)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableRight = false;
-	}}else{
+		}
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
+		}else{
 		controles.enableRight = true;
-	}
+		}
+		
+		
 	if(Physics.Raycast(transform.position, izquierda, hit, 0.51)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableLeft = false;
-	}}else{
+	}
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
+		
+	}else{
 		controles.enableLeft = true;
 	}
 	

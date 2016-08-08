@@ -19,7 +19,7 @@ function iniciar (){
 	informacion.SetActive(true);
 	FIN_canvas.SetActive(false);
 	informacion.GetComponent(Animation).Play("informaciones_in");
-	PlayerPrefs.SetInt("record", 5);
+
 }
 
 function menu(){

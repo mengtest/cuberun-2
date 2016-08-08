@@ -12,6 +12,9 @@ function OnTriggerEnter(col : Collider){
 		}
 		//col.GetComponent(cubos).viendo = true;
 	}
+	if(col.tag == "puntos"){
+		punto(col);
+	}
 }
 
 function miniup(col : Collider){
@@ -23,4 +26,10 @@ function sonido(col : Collider){
 	
 	this.gameObject.GetComponent(AudioSource).pitch = col.GetComponent(Transform).position.z * 1.2;	
 	this.gameObject.GetComponent(AudioSource).Play();
+}
+
+function punto(col : Collider){
+	if(Random.Range(0,50) < 30){
+		Destroy(col.gameObject);
+	}
 }

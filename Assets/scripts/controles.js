@@ -22,12 +22,18 @@ function Update () {
 	if(Physics.Raycast(ray, hit, 20)){
 		if(hit.collider.transform.name == "control_derecho"){
 		if(enableRight == true){
-		jugador.transform.Translate(Vector3(0, 0, -velocidad));
+		jugador.transform.Translate(Vector3(0, 0, -velocidad), Space.World);
+		giro(1);	
+		}else{
+		giro(0);
 		}}
 		
 		if(hit.collider.transform.name == "control_izquierdo"){
 		if(enableLeft == true){
-		jugador.transform.Translate(Vector3(0, 0, velocidad));
+		jugador.transform.Translate(Vector3(0, 0, velocidad), Space.World);
+		giro(2);	
+		}else{
+		giro(0);
 		}}
 	
 	}	

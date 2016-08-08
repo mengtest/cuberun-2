@@ -5,6 +5,7 @@ static var galletas = 0;
 private var record : int;
 var contadorPuntos : GameObject;
 var contadorRecord : GameObject;
+var contadorGalletas : GameObject;
 private var velocidadpuntos = 1.2;
 
 function Start(){
@@ -18,6 +19,11 @@ function Update () {
 	if(Cube.mover == true){
 		
 	}
+}
+
+function sumargalleta(){
+	galletas = galletas + 1;
+	contadorGalletas.GetComponent(Text).text =  "Galletas " + galletas;
 }
 
 function sumarpuntos(){
