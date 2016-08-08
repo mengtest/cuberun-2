@@ -1,5 +1,7 @@
 ﻿import UnityEngine.UI;
 
+
+var informacion : GameObject;
 var objetosPausa : GameObject;
 var pausatxt : GameObject;
 var reanudarbtn : GameObject;
@@ -8,14 +10,25 @@ var ajusteGroup : GameObject;
 var ajusteBackground : GameObject;
 var btnConfigMusica : GameObject;
 var btnConfigSonido : GameObject;
+var FIN_canvas : GameObject;
 
 function iniciar (){
 
 	Application.LoadLevel("nvl1");
+	informacion.GetComponent(Animation).Play("informaciones_in");
 }
 
 function menu(){
 Application.LoadLevel("menu");
+}
+
+function acabado(){
+	if(FIN_canvas.active == false){
+		informacion.GetComponent(Animation).Play("informaciones_out");
+		FIN_canvas.SetActive(true);
+		FIN_canvas.GetComponent(Animation).Play();
+		//gameObject.Find("Main Camera").GetComponents(unityStandardAssets.Effects.ImageEffects.DepthOfField).enabled = true;
+	}
 }
 
 function pausa (){
