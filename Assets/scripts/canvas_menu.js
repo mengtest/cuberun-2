@@ -14,6 +14,10 @@ function iniciar (){
 	Application.LoadLevel("nvl1");
 }
 
+function menu(){
+Application.LoadLevel("menu");
+}
+
 function pausa (){
 	if(objetosPausa.active == false){
 		Cube.mover = false;

@@ -53,5 +53,6 @@ function Update () {
 
 function fin(){
 mover = false;
-gameObject.Find("canvas").GetComponent(puntuaciones).fin();
+gameObject.Find("Main Camera").GetComponent(camara).fin();
+//gameObject.Find("canvas").GetComponent(puntuaciones).fin();
 }
