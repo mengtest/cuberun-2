@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 //static var velocidad = 0.27;
-static var velocidad = 0.12;
+static var velocidad = 0.14;
 static var mover : boolean = true;
 
 
@@ -46,7 +46,7 @@ function Update () {
 		}
 	}
 
-	if(Physics.Raycast(transform.position, derecha, hit, 0.51)){
+	if(Physics.Raycast(transform.position, derecha, hit, 0.55)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableRight = false;
 		}}else{
@@ -54,7 +54,7 @@ function Update () {
 		}
 		
 		
-	if(Physics.Raycast(transform.position, izquierda, hit, 0.51)){
+	if(Physics.Raycast(transform.position, izquierda, hit, 0.55)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableLeft = false;
 	}}else{

@@ -1,6 +1,11 @@
 ﻿#pragma strict
 
 var rand = 0;
+var camara : GameObject;
+
+function Update(){
+	this.transform.position = Vector2(camara.transform.position.x + 20, transform.position.y);
+}
 
 function OnTriggerEnter(col : Collider){
 	if(col.tag == "pared"){

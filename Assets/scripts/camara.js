@@ -13,6 +13,8 @@ function Update () {
 	
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad, 0), Space.World);
+		//this.transform.Translate(Vector3(0.002,0.005,-0.0051));
+		this.transform.Translate(Vector3(0.0005666,0.0016666,-0.0017));
 	}
 	
 	if(end == true){

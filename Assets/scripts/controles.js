@@ -14,19 +14,19 @@ function Start () {
 		velocidad = 0.085;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 2){
-		velocidad = 0.092;
+		velocidad = 0.093;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 3){
-		velocidad = 0.2;
+		velocidad = 0.098;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 4){
-		velocidad = 0.3;
+		velocidad = 0.12;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 5){
-		velocidad = 0.35;
+		velocidad = 0.19;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 6){
-		velocidad = 0.55;
+		velocidad = 0.25;
 	}
 
 }
