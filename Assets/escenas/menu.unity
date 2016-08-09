@@ -2182,6 +2182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titulo: {fileID: 704280307}
+  dineroYRecord: {fileID: 1878695125}
   playbtn: {fileID: 1416726774}
   shopbtn: {fileID: 854023572}
   setingbtn: {fileID: 57273680}
@@ -3933,7 +3934,7 @@ GameObject:
   - 222: {fileID: 1878695128}
   - 114: {fileID: 1878695127}
   m_Layer: 5
-  m_Name: Text
+  m_Name: monedas_y_record
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

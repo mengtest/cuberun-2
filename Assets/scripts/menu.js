@@ -1,11 +1,16 @@
 ﻿#pragma strict
 
 var titulo : GameObject;
+var dineroYRecord : GameObject;
 var playbtn : GameObject;
 var shopbtn : GameObject;
 var setingbtn : GameObject;
 var tiendaGroup : GameObject;
 var ajustesGroup : GameObject;
+
+function Update(){
+	dineroYRecord.GetComponent(Text).text = "Tienes " + PlayerPrefs.GetInt("dinero") + " galletas y tu record es " + PlayerPrefs.GetInt("record");
+}
 
 function seting(){
 	if(ajustesGroup.active == false){

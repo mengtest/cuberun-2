@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-//private var dinero = PlayerPrefs.GetInt("galletas");
+//private var dinero = PlayerPrefs.GetInt("dinero");
 private var dinero = 1500;
 
 var txtDinero : GameObject;
