@@ -15,6 +15,8 @@ function Start(){
 	record = PlayerPrefs.GetInt("record");
 	esperarpuntos();
 	recordfunc();
+	puntos = 0;
+	i = 11;
 }
 
 function Update () {

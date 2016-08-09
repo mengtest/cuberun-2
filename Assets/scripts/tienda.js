@@ -32,10 +32,7 @@ function leerdatos(){
 	}
 	
 	//SETEO DE LAS MEJORAS DE GIRO. ----------------------------------------------------------------
-	if(PlayerPrefs.GetInt("nivel_giro") == 6){
-		PlayerPrefs.SetInt("nivel_giro", 1);
-	}
-	txtNivelGiro.GetComponent(Text).text = "Nivel " + PlayerPrefs.GetInt("nivel_giro") + "/6";
+
 	if(PlayerPrefs.GetInt("nivel_giro") == 1){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "50$ \n COMPRAR";
 	}
@@ -55,6 +52,7 @@ function leerdatos(){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "NIVEL MAX!";
 		btnMejorarGiro.GetComponent(Button).interactable = false;
 	}
+	txtNivelGiro.GetComponent(Text).text = "Nivel " + PlayerPrefs.GetInt("nivel_giro") + "/6";
 	
 	//SETEO DE LOS BOTONES DE COMPRAR LOS COLORES DEL PERSONAJE. ---------------------------------------
 	if(PlayerPrefs.GetInt("color_white") == 1){
@@ -83,8 +81,10 @@ function leerdatos(){
 }
 
 function galletas(){
-	if(dinero >= 50){
+	if(dinero >= 10){
 		PlayerPrefs.SetInt("galletas_habilitadas", 1);
+		dinero = dinero - 10;
+		PlayerPrefs.SetInt("dinero", dinero);
 		leerdatos();
 	}
 }
@@ -96,6 +96,7 @@ function comprarousar(objeto : GameObject){
 				PlayerPrefs.SetInt("color_yellow", 1);
 				btnYellow.transform.GetChild(0).GetComponent(Text).text = "USAR";
 				dinero = dinero - 20;
+				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
 		if(objeto.name == "color_yellow-green"){
@@ -103,6 +104,7 @@ function comprarousar(objeto : GameObject){
 				PlayerPrefs.SetInt("color_yellowgreen", 1);
 				btnYellowgreen.transform.GetChild(0).GetComponent(Text).text = "USAR";
 				dinero = dinero - 90;
+				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
 		if(objeto.name == "color_green"){
@@ -110,6 +112,7 @@ function comprarousar(objeto : GameObject){
 				PlayerPrefs.SetInt("color_green", 1);
 				btnGreen.transform.GetChild(0).GetComponent(Text).text = "USAR";
 				dinero = dinero - 35;
+				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
 		if(objeto.name == "color_cyan"){
@@ -117,6 +120,7 @@ function comprarousar(objeto : GameObject){
 				PlayerPrefs.SetInt("color_cyan", 1);
 				btnCyan.transform.GetChild(0).GetComponent(Text).text = "USAR";
 				dinero = dinero - 60;
+				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
 		if(objeto.name == "color_blue"){
@@ -124,6 +128,7 @@ function comprarousar(objeto : GameObject){
 				PlayerPrefs.SetInt("color_blue", 1);
 				btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
 				dinero = dinero - 80;
+				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
 	}
@@ -143,30 +148,35 @@ function mejoragiro(){
 		if(dinero >= 50){
 			PlayerPrefs.SetInt("nivel_giro", 2);
 			dinero = dinero - 50;
+			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 2){
 		if(dinero >= 150){
 			PlayerPrefs.SetInt("nivel_giro", 3);
 			dinero = dinero - 150;
+			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 3){
 		if(dinero >= 350){
 			PlayerPrefs.SetInt("nivel_giro", 4);
 			dinero = dinero - 350;
+			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 4){
 		if(dinero >= 600){
 			PlayerPrefs.SetInt("nivel_giro", 5);
 			dinero = dinero - 600;
+			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 5){
 		if(dinero >= 1000){
 			PlayerPrefs.SetInt("nivel_giro", 6);
 			dinero = dinero - 1000;
+			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	leerdatos();

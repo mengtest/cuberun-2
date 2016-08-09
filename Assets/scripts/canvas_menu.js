@@ -37,6 +37,7 @@ function acabado(){
 		FIN_canvas.gameObject.transform.FindChild("puntuacion").GetComponent(Text).text = "Puntuacion " + puntuaciones.puntos;
 		if(puntuaciones.puntos >= PlayerPrefs.GetInt("record")){
 			FIN_canvas.transform.FindChild("recordmsg").gameObject.active = true;
+			PlayerPrefs.SetInt("record", puntuaciones.puntos);
 		}else{
 			FIN_canvas.transform.FindChild("recordmsg").gameObject.active = false;
 		}
@@ -91,6 +92,11 @@ function ajustes(opcion : int){ //0 es entrada, 1 es salida.
 function ajuste2(){
 	yield WaitForSeconds(1);
 	ajusteGroup.SetActive(false);
+}
+
+function reset(){
+	PlayerPrefs.DeleteAll();
+	Application.LoadLevel("menu");
 }
 
 function configmusica(){
