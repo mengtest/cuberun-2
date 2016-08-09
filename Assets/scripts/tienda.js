@@ -5,6 +5,7 @@ private var dinero = 1500;
 
 var txtDinero : GameObject;
 var btnMejorarGiro : GameObject;
+var btnHabilitarGalletas : GameObject;
 var txtNivelGiro : GameObject;
 
 var btnWrite : GameObject;
@@ -23,6 +24,12 @@ function Start () {
 	
 }
 function leerdatos(){
+
+	if(PlayerPrefs.GetInt("galletas_habilitadas") == 1){
+		btnHabilitarGalletas.transform.GetChild(0).GetComponent(Text).text = "Galletas habilitadas :3";
+		btnHabilitarGalletas.GetComponent(Button).interactable = false;
+	}
+	
 	//SETEO DE LAS MEJORAS DE GIRO. ----------------------------------------------------------------
 	if(PlayerPrefs.GetInt("nivel_giro") == 0){
 		PlayerPrefs.SetInt("nivel_giro", 1);
@@ -72,6 +79,14 @@ function leerdatos(){
 	print(coloruso);
 	GameObject.Find("Canvas").transform.FindChild("tienda").transform.FindChild("colores_jugador").transform.FindChild(coloruso).transform.GetChild(0).transform.GetChild(0).GetComponent(Text).text = "USANDO";
 }
+
+function galletas(){
+	if(dinero >= 50){
+		PlayerPrefs.SetInt("galletas_habilitadas", 1);
+		leerdatos();
+	}
+}
+
 function comprarousar(objeto : GameObject){
 	if(objeto.transform.GetChild(0).transform.GetChild(0).GetComponent(Text).text.Contains("COMPRAR") == true){
 		if(objeto.name == "color_yellow"){
