@@ -5,11 +5,29 @@ import System.Collections.Generic;
 var jugador:GameObject;
 static var enableRight = true;
 static var enableLeft = true;
-private var velocidad = 0.14;
+private var velocidad = 0.085;
 
 private var i = 0.0; //lerp de las rotaciones
 
 function Start () {
+	if(PlayerPrefs.GetInt("nivel_giro") == 1){
+		velocidad = 0.085;
+	}
+	if(PlayerPrefs.GetInt("nivel_giro") == 2){
+		velocidad = 0.092;
+	}
+	if(PlayerPrefs.GetInt("nivel_giro") == 3){
+		velocidad = 0.2;
+	}
+	if(PlayerPrefs.GetInt("nivel_giro") == 4){
+		velocidad = 0.3;
+	}
+	if(PlayerPrefs.GetInt("nivel_giro") == 5){
+		velocidad = 0.35;
+	}
+	if(PlayerPrefs.GetInt("nivel_giro") == 6){
+		velocidad = 0.55;
+	}
 
 }
 

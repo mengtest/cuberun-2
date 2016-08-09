@@ -14,7 +14,7 @@ function OnTriggerEnter(col : Collider){
 		//col.GetComponent(cubos).viendo = true;
 	}
 	if(col.tag == "puntos"){
-		punto(col);
+		//punto(col);
 	}
 }
 

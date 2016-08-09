@@ -29,7 +29,7 @@ Application.LoadLevel("menu");
 
 function acabado(){
 	if(FIN_canvas.active == false){
-		var galletasTotales : int = PlayerPrefs.GetInt("galletas") + puntuaciones.galletas;
+		var galletasTotales : int = PlayerPrefs.GetInt("dinero") + puntuaciones.galletas;
 		
 		informacion.GetComponent(Animation).Play("informaciones_out");
 		FIN_canvas.SetActive(true);
@@ -42,7 +42,7 @@ function acabado(){
 		}
 		FIN_canvas.gameObject.transform.FindChild("galletas").GetComponent(Text).text = "Galletas recogidas " + puntuaciones.galletas; 
 		FIN_canvas.gameObject.transform.FindChild("galletas_totales").GetComponent(Text).text = "Totales: " + galletasTotales;
-		PlayerPrefs.SetInt("galletas", galletasTotales);
+		PlayerPrefs.SetInt("dinero", galletasTotales);
 		
 		
 		//gameObject.Find("Main Camera").GetComponents(unityStandardAssets.Effects.ImageEffects.DepthOfField).enabled = true;
@@ -52,6 +52,8 @@ function acabado(){
 function pausa (){
 	if(objetosPausa.active == false){
 		Cube.mover = false;
+		puntuaciones.sumar = false;
+		informacion.GetComponent(Animation).Play("informaciones_out");
 		objetosPausa.SetActive(true);
 		pausatxt.GetComponent(Animation).Play();
 		reanudarbtn.GetComponent(Animation).Play();
@@ -62,7 +64,7 @@ function pausa (){
 }
 
 function reanudar (){
-		
+		informacion.GetComponent(Animation).Play("informaciones_in");
 		pausatxt.GetComponent(Animation).Play("pausatxtout");
 		reanudarbtn.GetComponent(Animation).Play("reanudarbtnout");
 		ajustesbtn.GetComponent(Animation).Play("ajusteout");
@@ -70,7 +72,8 @@ function reanudar (){
 }
 
 function reanudar2(){
-			yield WaitForSeconds(1);
+			yield WaitForSeconds(0.4);
+			puntuaciones.sumar = true;
 			Cube.mover = true;
 			objetosPausa.SetActive(false);
 }

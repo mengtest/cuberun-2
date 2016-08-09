@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
-//private var dinero = PlayerPrefs.GetInt("dinero");
-private var dinero = 1500;
+private var dinero = 0;
+//private var dinero = 1500;
 
 var txtDinero : GameObject;
 var btnMejorarGiro : GameObject;
@@ -16,6 +16,7 @@ var btnCyan : GameObject;
 var btnBlue : GameObject;
 
 function Update(){
+	dinero = PlayerPrefs.GetInt("dinero");
 	txtDinero.GetComponent(Text).text = dinero + " galletas";
 }
 
@@ -31,10 +32,10 @@ function leerdatos(){
 	}
 	
 	//SETEO DE LAS MEJORAS DE GIRO. ----------------------------------------------------------------
-	if(PlayerPrefs.GetInt("nivel_giro") == 0){
+	if(PlayerPrefs.GetInt("nivel_giro") == 6){
 		PlayerPrefs.SetInt("nivel_giro", 1);
 	}
-	txtNivelGiro.GetComponent(Text).text = "Nivel " + PlayerPrefs.GetInt("nivel_giro") + "/5";
+	txtNivelGiro.GetComponent(Text).text = "Nivel " + PlayerPrefs.GetInt("nivel_giro") + "/6";
 	if(PlayerPrefs.GetInt("nivel_giro") == 1){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "50$ \n COMPRAR";
 	}
@@ -52,6 +53,7 @@ function leerdatos(){
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 6){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "NIVEL MAX!";
+		btnMejorarGiro.GetComponent(Button).interactable = false;
 	}
 	
 	//SETEO DE LOS BOTONES DE COMPRAR LOS COLORES DEL PERSONAJE. ---------------------------------------

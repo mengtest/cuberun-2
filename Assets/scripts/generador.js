@@ -2,6 +2,7 @@
 
 var variatorZ = 0.0;
 
+var lineal : GameObject;
 var preset1 : GameObject;
 var preset2 : GameObject;
 var preset3 : GameObject;
@@ -11,7 +12,9 @@ private var i = 70;
 private var X = 0;
 
 function Start () {
-generar();
+	Instantiate(lineal, new Vector3(-41, 46.5, variatorZ), Quaternion.identity);
+	Instantiate(lineal, new Vector3(-82.25, 46.5, variatorZ), Quaternion.identity);
+	generar();
 }
 
 function Update () {

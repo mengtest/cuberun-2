@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 static var puntos : int = 0;
+static var sumar = true;
 static var galletas = 0;
 private var record : int;
 var contadorPuntos : GameObject;
@@ -27,7 +28,9 @@ function sumargalleta(){
 }
 
 function sumarpuntos(){
-	puntos ++;
+	if(sumar == true){
+		puntos ++;
+	}
 	esperarpuntos();
 	
 	if(puntos < 10){
@@ -37,10 +40,9 @@ function sumarpuntos(){
 	}
 }
 function esperarpuntos(){
-	yield WaitForSeconds(velocidadpuntos);
 	
+	yield WaitForSeconds(velocidadpuntos);	
 	sumarpuntos();
-	velocidadpuntos = velocidadpuntos * 0.994;
 	
 }
 

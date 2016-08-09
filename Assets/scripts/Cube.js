@@ -1,11 +1,12 @@
 ﻿#pragma strict
 
 //static var velocidad = 0.27;
-static var velocidad = 0.08;
+static var velocidad = 0.12;
 static var mover : boolean = true;
 
 
 function Start () {
+color();
 mover = true;
 }
 
@@ -29,23 +30,26 @@ function Update () {
 	if(Physics.Raycast(Vector3(transform.position.x + 0.51, transform.position.y, transform.position.z -0.47), Vector3(0, 0, 1), hit, 0.81)){
 		if(hit.collider.transform.tag == "pared"){
 			fin();
+		}		
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
 		}
 	}
 	if(Physics.Raycast(Vector3(transform.position.x + 0.51, transform.position.y, transform.position.z +0.47), Vector3(0, 0, -1), hit, 0.81)){
 		if(hit.collider.transform.tag == "pared"){
 			fin();
 		}
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
 	}
 
 	if(Physics.Raycast(transform.position, derecha, hit, 0.51)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableRight = false;
-		}
-		if(hit.collider.transform.tag == "puntos"){
-			Destroy(hit.collider.gameObject);
-			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
-		}
-		}else{
+		}}else{
 		controles.enableRight = true;
 		}
 		
@@ -53,16 +57,29 @@ function Update () {
 	if(Physics.Raycast(transform.position, izquierda, hit, 0.51)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableLeft = false;
-	}
-		if(hit.collider.transform.tag == "puntos"){
-			Destroy(hit.collider.gameObject);
-			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
-		}
-		
-	}else{
+	}}else{
 		controles.enableLeft = true;
 	}
 	
+}
+
+function color(){
+	
+	if(PlayerPrefs.GetString("coloruse") == "color_white"){
+		this.GetComponent(Renderer).material.color = Color.white;
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_yellow"){
+		this.GetComponent(Renderer).material.color = Color.yellow;
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_green"){
+		this.GetComponent(Renderer).material.color = Color.green;
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_yellow-green"){
+		this.GetComponent(Renderer).material.color = new Color(146, 255, 0);
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_blue"){
+		this.GetComponent(Renderer).material.color = Color.blue;
+	}
 }
 
 function fin(){
