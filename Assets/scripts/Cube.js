@@ -91,6 +91,9 @@ function color(){
 	if(PlayerPrefs.GetString("coloruse") == "color_blue"){
 		this.GetComponent(Renderer).material.color = Color.blue;
 	}
+	if(PlayerPrefs.GetString("coloruse") == "color_red"){
+		this.GetComponent(Renderer).material.color = Color.red;
+	}
 	if(PlayerPrefs.GetString("coloruse") == "color_epileptic"){
 		epileptic = true;
 		this.GetComponent(AudioSource).Play();

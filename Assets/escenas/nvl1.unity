@@ -426,6 +426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: 0
   PLAYER: {fileID: 1461265072}
+  MusicSource: {fileID: 1461265072}
+  SoundSource: {fileID: 457450497}
   end: 0
 --- !u!81 &751903702
 AudioListener:

@@ -14,6 +14,7 @@ var btnYellowgreen : GameObject;
 var btnGreen : GameObject;
 var btnCyan : GameObject;
 var btnBlue : GameObject;
+var btnRed : GameObject;
 var btnEpileptic : GameObject;
 
 function Update(){
@@ -77,6 +78,10 @@ function leerdatos(){
 	if(PlayerPrefs.GetInt("color_blue") == 1){
 		btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
 	}
+	}
+	if(PlayerPrefs.GetInt("color_red") == 1){
+		btnRed.transform.GetChild(0).GetComponent(Text).text = "USAR";
+	}
 	if(PlayerPrefs.GetInt("color_epileptic") == 1){
 		btnEpileptic.transform.GetChild(0).GetComponent(Text).text = "USAR";
 	}
@@ -85,7 +90,7 @@ function leerdatos(){
 	var coloruso = PlayerPrefs.GetString("coloruse");
 	print(coloruso);
 	GameObject.Find("Canvas").transform.FindChild("tienda").transform.FindChild("colores_jugador").transform.FindChild(coloruso).transform.GetChild(0).transform.GetChild(0).GetComponent(Text).text = "USANDO";
-}
+
 
 function galletas(){
 	if(dinero >= 10){
@@ -138,11 +143,19 @@ function comprarousar(objeto : GameObject){
 				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
+		if(objeto.name == "color_red"){
+			if(dinero >= 60){
+				PlayerPrefs.SetInt("color_red", 1);
+				btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
+				dinero = dinero - 60;
+				PlayerPrefs.SetInt("dinero", dinero);
+			}
+		}
 		if(objeto.name == "color_epileptic"){
-			if(dinero >= 0){
+			if(dinero >= 500){
 				PlayerPrefs.SetInt("color_epileptic", 1);
 				btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
-				dinero = dinero - 0;
+				dinero = dinero - 500;
 				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}

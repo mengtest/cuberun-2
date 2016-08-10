@@ -1,11 +1,27 @@
-﻿#pragma strict
+﻿
 
 var i = 0.0; //Lerp
 var PLAYER : GameObject;
+var MusicSource : GameObject;
+var SoundSource : GameObject;
 var end = false;
+
 function Start () {
 	Cube.mover = true;
+}
+function configload(){
 	var music = PlayerPrefs.GetInt("music");
+	var sound = PlayerPrefs.GetInt("sound");
+	if(music == 0){
+		MusicSource.GetComponent(AudioSource).mute = true;
+	}else{
+		MusicSource.GetComponent(AudioSource).mute = false;
+	}
+	if(sound == 0){
+		SoundSource.GetComponent(AudioSource).mute = true;
+	}else{
+		SoundSource.GetComponent(AudioSource).mute = false;
+	}
 }
 
 function Update () {

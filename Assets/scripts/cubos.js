@@ -35,7 +35,3 @@ function Start(){
 		GetComponent(Renderer).material.color = Color.cyan;
 	}*/
 }
-
-function Update(){
-	this.GetComponent(Renderer).material.color = Color(Random.Range(0.0,1.0),Random.Range(0.0,1.0),Random.Range(0.0,1.0));
-}

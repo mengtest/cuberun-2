@@ -107,6 +107,7 @@ function configmusica(){
 		PlayerPrefs.SetInt("music", 1);
 		btnConfigMusica.gameObject.transform.GetChild(0).GetComponent(Text).text = "Musica: ON";
 	}
+	GameObject.Find("Main Camera").GetComponent(camara).configload();
 }
 function configsonido(){
 	if(btnConfigSonido.gameObject.transform.GetChild(0).GetComponent(Text).text == "Sonidos: ON"){
@@ -116,4 +117,5 @@ function configsonido(){
 		PlayerPrefs.SetInt("sound", 1);
 		btnConfigSonido.gameObject.transform.GetChild(0).GetComponent(Text).text = "Sonidos: ON";
 	}
+	GameObject.Find("Main Camera").GetComponent(camara).configload();
 }
