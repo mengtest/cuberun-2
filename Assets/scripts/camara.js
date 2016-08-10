@@ -5,6 +5,7 @@ var PLAYER : GameObject;
 var MusicSource : GameObject;
 var SoundSource : GameObject;
 var end = false;
+var tutorialMode = false;
 
 function Start () {
 	Cube.mover = true;
@@ -25,7 +26,11 @@ function configload(){
 }
 
 function Update () {
-	var velocidad = Cube.velocidad;
+	if(tutorialMode == false){
+		var velocidad = Cube.velocidad;
+	}else{
+		velocidad = 0.2;
+	}
 	var mover = Cube.mover;
 	
 	if(mover == true){

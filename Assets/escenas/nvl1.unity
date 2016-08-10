@@ -429,6 +429,7 @@ MonoBehaviour:
   MusicSource: {fileID: 1461265072}
   SoundSource: {fileID: 457450497}
   end: 0
+  tutorialMode: 0
 --- !u!81 &751903702
 AudioListener:
   m_ObjectHideFlags: 0
@@ -881,9 +882,10 @@ MonoBehaviour:
   preset2: {fileID: 170368, guid: 089479c745e887b4292cbccbe92e6325, type: 2}
   preset3: {fileID: 157620, guid: 3073791f04192e1468f7dcb3b4d36401, type: 2}
   preset4: {fileID: 176976, guid: f950dc411e6d2c040bc7caf4637dc5ea, type: 2}
-  preset5: {fileID: 174460, guid: 36d95f5e1a24250429b3df8778f53c21, type: 2}
-  preset6: {fileID: 174460, guid: 36d95f5e1a24250429b3df8778f53c21, type: 2}
-  preset7: {fileID: 178292, guid: 0c44249fc38850544b171e56f06933e0, type: 2}
+  preset5: {fileID: 187026, guid: 3611d2b7cb8d98148b62392f3e5803e1, type: 2}
+  preset6: {fileID: 137514, guid: 23cdf58889d233846b545c411189126b, type: 2}
+  preset7: {fileID: 157118, guid: 40751adfce8c9fb478d65e90196c1a72, type: 2}
+  preset8: {fileID: 138152, guid: 67c848d4b20cdde49b2057447ca370c8, type: 2}
 --- !u!114 &1461265075
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ private var velocidadpuntos = 1.2;
 private var i : int = 10;
 
 function Start(){
-	//PlayerPrefs.SetInt("record", 5);
+	galletas = 0;
 	record = PlayerPrefs.GetInt("record");
 	esperarpuntos();
 	recordfunc();

@@ -21,6 +21,11 @@ function iniciar (){
 	informacion.GetComponent(Animation).Play("informaciones_in");
 
 }
+function Start(){
+	if(PlayerPrefs.GetInt("tutorial") == 0){
+		Application.LoadLevel("tutorial");
+	}
+}
 
 function menu(){
 Cube.velocidad = 0.1;

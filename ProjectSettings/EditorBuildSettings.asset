@@ -10,4 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/escenas/nvl1.unity
   - enabled: 1
+    path: Assets/escenas/tutorial.unity
+  - enabled: 1
     path: Assets/escenas/debug.unity
