@@ -78,7 +78,6 @@ function leerdatos(){
 	if(PlayerPrefs.GetInt("color_blue") == 1){
 		btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
 	}
-	}
 	if(PlayerPrefs.GetInt("color_red") == 1){
 		btnRed.transform.GetChild(0).GetComponent(Text).text = "USAR";
 	}
@@ -91,7 +90,7 @@ function leerdatos(){
 	print(coloruso);
 	GameObject.Find("Canvas").transform.FindChild("tienda").transform.FindChild("colores_jugador").transform.FindChild(coloruso).transform.GetChild(0).transform.GetChild(0).GetComponent(Text).text = "USANDO";
 
-
+}
 function galletas(){
 	if(dinero >= 10){
 		PlayerPrefs.SetInt("galletas_habilitadas", 1);

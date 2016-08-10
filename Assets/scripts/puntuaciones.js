@@ -8,7 +8,7 @@ var contadorPuntos : GameObject;
 var contadorRecord : GameObject;
 var contadorGalletas : GameObject;
 private var velocidadpuntos = 1.2;
-private var i : int = 11;
+private var i : int = 10;
 
 function Start(){
 	//PlayerPrefs.SetInt("record", 5);
@@ -16,7 +16,7 @@ function Start(){
 	esperarpuntos();
 	recordfunc();
 	puntos = 0;
-	i = 11;
+	i = 10;
 }
 
 function Update () {
@@ -47,7 +47,7 @@ function esperarpuntos(){
 	yield WaitForSeconds(velocidadpuntos);	
 	sumarpuntos();
 	if(puntos == i){
-		i = i + 11;
+		i = i + 10;
 		galletas = galletas + 1;
 		contadorGalletas.GetComponent(Text).text =  "Galletas " + galletas;
 	}

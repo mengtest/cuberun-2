@@ -883,6 +883,7 @@ MonoBehaviour:
   preset4: {fileID: 176976, guid: f950dc411e6d2c040bc7caf4637dc5ea, type: 2}
   preset5: {fileID: 187026, guid: 3611d2b7cb8d98148b62392f3e5803e1, type: 2}
   preset6: {fileID: 137514, guid: 23cdf58889d233846b545c411189126b, type: 2}
+  preset7: {fileID: 157118, guid: 40751adfce8c9fb478d65e90196c1a72, type: 2}
 --- !u!114 &1461265075
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -484,9 +484,8 @@ MonoBehaviour:
   btnGreen: {fileID: 1834341193}
   btnCyan: {fileID: 348594532}
   btnBlue: {fileID: 1879057731}
-  btnRed: {fileID: 0}
+  btnRed: {fileID: 284724576}
   btnEpileptic: {fileID: 1413779824}
-  coloruso: 
 --- !u!1 &194765007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,6 +1111,8 @@ MonoBehaviour:
   preset2: {fileID: 170368, guid: 089479c745e887b4292cbccbe92e6325, type: 2}
   preset3: {fileID: 157620, guid: 3073791f04192e1468f7dcb3b4d36401, type: 2}
   preset4: {fileID: 176976, guid: f950dc411e6d2c040bc7caf4637dc5ea, type: 2}
+  preset5: {fileID: 0}
+  preset6: {fileID: 0}
 --- !u!82 &403017023
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2557,11 +2558,11 @@ MonoBehaviour:
   objetosPausa: {fileID: 0}
   pausatxt: {fileID: 0}
   reanudarbtn: {fileID: 0}
-  ajustesbtn: {fileID: 0}
-  ajusteGroup: {fileID: 0}
-  ajusteBackground: {fileID: 0}
-  btnConfigMusica: {fileID: 0}
-  btnConfigSonido: {fileID: 0}
+  ajustesbtn: {fileID: 57273680}
+  ajusteGroup: {fileID: 1561374554}
+  ajusteBackground: {fileID: 1664974095}
+  btnConfigMusica: {fileID: 582302980}
+  btnConfigSonido: {fileID: 1751855473}
   FIN_canvas: {fileID: 0}
 --- !u!114 &918808334
 MonoBehaviour:
@@ -5156,13 +5157,13 @@ RectTransform:
   m_GameObject: {fileID: 1923537399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .261747122, y: .261747003, z: .261747003}
+  m_LocalScale: {x: .167595223, y: .167595178, z: .167595178}
   m_Children: []
   m_Father: {fileID: 170076463}
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -523}
+  m_AnchoredPosition: {x: 0, y: -496}
   m_SizeDelta: {x: 3056, y: 348}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1923537401
