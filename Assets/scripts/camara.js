@@ -29,7 +29,7 @@ function Update () {
 	if(tutorialMode == false){
 		var velocidad = Cube.velocidad;
 	}else{
-		velocidad = 0.2;
+		velocidad = 0.17;
 	}
 	var mover = Cube.mover;
 	

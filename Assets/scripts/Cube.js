@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 //static var velocidad = 0.27;
-static var velocidad = 0.15;
+static var velocidad = 0.08;
 static var mover : boolean = true;
 var colores : Color;
 private var epileptic = false;
@@ -10,7 +10,7 @@ function Start () {
 color();
 mover = true;
 print(colores);
-velocidad = 0.15;
+velocidad = 0.08;
 
 }
 
