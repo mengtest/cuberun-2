@@ -14,6 +14,7 @@ var btnYellowgreen : GameObject;
 var btnGreen : GameObject;
 var btnCyan : GameObject;
 var btnBlue : GameObject;
+var btnEpileptic : GameObject;
 
 function Update(){
 	dinero = PlayerPrefs.GetInt("dinero");
@@ -21,6 +22,7 @@ function Update(){
 }
 
 function Start () {
+
 	leerdatos();
 	
 }
@@ -32,7 +34,9 @@ function leerdatos(){
 	}
 	
 	//SETEO DE LAS MEJORAS DE GIRO. ----------------------------------------------------------------
-
+	if(PlayerPrefs.GetInt("nivel_giro") == 0){
+		PlayerPrefs.SetInt("nivel_giro", 1);
+	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 1){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "50$ \n COMPRAR";
 	}
@@ -72,6 +76,9 @@ function leerdatos(){
 	}
 	if(PlayerPrefs.GetInt("color_blue") == 1){
 		btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
+	}
+	if(PlayerPrefs.GetInt("color_epileptic") == 1){
+		btnEpileptic.transform.GetChild(0).GetComponent(Text).text = "USAR";
 	}
 	
 	//SETEO DEL COLOR DEL JUGADOR -------------------------------------------------------------------------
@@ -128,6 +135,14 @@ function comprarousar(objeto : GameObject){
 				PlayerPrefs.SetInt("color_blue", 1);
 				btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
 				dinero = dinero - 80;
+				PlayerPrefs.SetInt("dinero", dinero);
+			}
+		}
+		if(objeto.name == "color_epileptic"){
+			if(dinero >= 0){
+				PlayerPrefs.SetInt("color_epileptic", 1);
+				btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
+				dinero = dinero - 0;
 				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}

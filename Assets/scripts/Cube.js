@@ -3,11 +3,14 @@
 //static var velocidad = 0.27;
 static var velocidad = 0.14;
 static var mover : boolean = true;
-
+var colores : Color;
+private var epileptic = false;
 
 function Start () {
 color();
 mover = true;
+print(colores);
+
 }
 
 function Update () {
@@ -61,6 +64,10 @@ function Update () {
 		controles.enableLeft = true;
 	}
 	
+	if(epileptic == true){
+	this.GetComponent(Renderer).material.color = Color(Random.Range(0.0,1.0),Random.Range(0.0,1.0),Random.Range(0.0,1.0));
+	}
+	
 }
 
 function color(){
@@ -75,10 +82,18 @@ function color(){
 		this.GetComponent(Renderer).material.color = Color.green;
 	}
 	if(PlayerPrefs.GetString("coloruse") == "color_yellow-green"){
-		this.GetComponent(Renderer).material.color = new Color(146, 255, 0);
+		//this.GetComponent(Renderer).material.color = new Color(146, 255, 0);
+		this.GetComponent(Renderer).material.color = Color(0.70, 1, 0.037);
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_cyan"){
+		this.GetComponent(Renderer).material.color = Color(0, 0.9,1);
 	}
 	if(PlayerPrefs.GetString("coloruse") == "color_blue"){
 		this.GetComponent(Renderer).material.color = Color.blue;
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_epileptic"){
+		epileptic = true;
+		this.GetComponent(AudioSource).Play();
 	}
 }
 

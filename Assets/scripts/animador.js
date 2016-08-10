@@ -2,9 +2,12 @@
 
 var rand = 0;
 var camara : GameObject;
+var i = 0.0;
 
 function Update(){
-	this.transform.position = Vector2(camara.transform.position.x + 20, transform.position.y);
+	i = -camara.transform.position.z + camara.transform.position.y;
+	this.transform.position = Vector2(camara.transform.position.x + -35 + i, transform.position.y);
+	
 }
 
 function OnTriggerEnter(col : Collider){

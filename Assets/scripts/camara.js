@@ -4,6 +4,7 @@ var i = 0.0; //Lerp
 var PLAYER : GameObject;
 var end = false;
 function Start () {
+	Cube.mover = true;
 	var music = PlayerPrefs.GetInt("music");
 }
 
@@ -14,7 +15,7 @@ function Update () {
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad, 0), Space.World);
 		//this.transform.Translate(Vector3(0.002,0.005,-0.0051));
-		this.transform.Translate(Vector3(0.0005666,0.0016666,-0.0026));
+		this.transform.Translate(Vector3(0.00005666,0.00016666,-0.00026));
 	}
 	
 	if(end == true){
