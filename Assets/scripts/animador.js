@@ -6,7 +6,7 @@ var i = 0.0;
 
 function Update(){
 	i = -camara.transform.position.z + camara.transform.position.y;
-	this.transform.position = Vector2(camara.transform.position.x + -35 + i, transform.position.y);
+	this.transform.position = Vector2(camara.transform.position.x + -36.5 + i, transform.position.y);
 	
 }
 

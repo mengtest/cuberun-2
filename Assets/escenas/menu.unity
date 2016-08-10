@@ -1113,6 +1113,7 @@ MonoBehaviour:
   preset4: {fileID: 176976, guid: f950dc411e6d2c040bc7caf4637dc5ea, type: 2}
   preset5: {fileID: 0}
   preset6: {fileID: 0}
+  preset7: {fileID: 0}
 --- !u!82 &403017023
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3696,9 +3697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '500$
-
-    COMPRAR'
+  m_Text: USAR
 --- !u!222 &1443210512
 CanvasRenderer:
   m_ObjectHideFlags: 0

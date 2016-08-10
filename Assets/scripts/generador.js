@@ -21,7 +21,7 @@ function Start () {
 }
 
 function Update () {
-	if(GameObject.Find("Main Camera").transform.position.x + 30 > X){
+	if(GameObject.Find("Main Camera").transform.position.x + 70 > X){
 		generar();
 	}
 }

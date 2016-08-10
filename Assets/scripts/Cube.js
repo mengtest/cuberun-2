@@ -65,6 +65,7 @@ function Update () {
 	}
 	
 	if(epileptic == true){
+	cubos.epileptic = true;
 	this.GetComponent(Renderer).material.color = Color(Random.Range(0.0,1.0),Random.Range(0.0,1.0),Random.Range(0.0,1.0));
 	}
 	
