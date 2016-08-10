@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 //static var velocidad = 0.27;
-static var velocidad = 0.14;
+static var velocidad = 0.15;
 static var mover : boolean = true;
 var colores : Color;
 private var epileptic = false;
@@ -10,13 +10,14 @@ function Start () {
 color();
 mover = true;
 print(colores);
+velocidad = 0.15;
 
 }
 
 function Update () {
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad, 0), Space.World);
-		velocidad = velocidad * 1.00012;
+		velocidad = velocidad * 1.00024;
 	}
 	
 	var hit:RaycastHit;
@@ -65,8 +66,10 @@ function Update () {
 	}
 	
 	if(epileptic == true){
-	cubos.epileptic = true;
-	this.GetComponent(Renderer).material.color = Color(Random.Range(0.0,1.0),Random.Range(0.0,1.0),Random.Range(0.0,1.0));
+		cubos.epileptic = true;
+		this.GetComponent(Renderer).material.color = Color(Random.Range(0.0,1.0),Random.Range(0.0,1.0),Random.Range(0.0,1.0));
+	}else{
+		cubos.epileptic = false;
 	}
 	
 }

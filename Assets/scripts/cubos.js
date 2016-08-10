@@ -36,6 +36,7 @@ function Start(){
 	if(rand == 9){
 		GetComponent(Renderer).material.color = Color.cyan;
 	}*/
+	borrame();
 	waitepileptic();
 }
 
@@ -44,6 +45,11 @@ function waitepileptic(){
 	if(epileptic == true){
 		epileptic2 = true;
 	}
+}
+
+function borrame(){
+	yield WaitForSeconds(30);
+	Destroy(this.gameObject);
 }
 
 function Update(){
