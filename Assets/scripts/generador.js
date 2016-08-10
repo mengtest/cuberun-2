@@ -1,7 +1,6 @@
 ﻿#pragma strict
 
 var variatorZ = 0.0;
-
 var lineal : GameObject;
 var preset1 : GameObject;
 var preset2 : GameObject;

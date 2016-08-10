@@ -19,6 +19,7 @@ function iniciar (){
 	informacion.SetActive(true);
 	FIN_canvas.SetActive(false);
 	informacion.GetComponent(Animation).Play("informaciones_in");
+	puntuaciones.sumar = true;
 
 }
 function Start(){
@@ -30,6 +31,9 @@ function Start(){
 function menu(){
 Cube.velocidad = 0.1;
 Application.LoadLevel("menu");
+}
+function enterdebug(){
+	Application.LoadLevel("debug_public");
 }
 
 function acabado(){

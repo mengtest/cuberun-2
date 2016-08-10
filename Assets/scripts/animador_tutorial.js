@@ -31,7 +31,7 @@ function OnTriggerEnter(col : Collider){
 function mostrar(col : Collider){
 	
 	
-	yield WaitForSeconds(2);
+	yield WaitForSeconds(1);
 	col.GetComponent(Renderer).enabled = true;
 	col.GetComponent(Animation).Play();
 	

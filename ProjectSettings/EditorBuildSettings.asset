@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/escenas/tutorial.unity
   - enabled: 1
     path: Assets/escenas/debug.unity
+  - enabled: 1
+    path: Assets/escenas/debug_public.unity

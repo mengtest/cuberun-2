@@ -39,19 +39,19 @@ function leerdatos(){
 		PlayerPrefs.SetInt("nivel_giro", 1);
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 1){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "50$ \n COMPRAR";
+		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "20$ \n COMPRAR";
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 2){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "150$ \n COMPRAR";
+		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "25$ \n COMPRAR";
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 3){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "350$ \n COMPRAR";
+		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "60$ \n COMPRAR";
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 4){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "600$ \n COMPRAR";
+		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "100$ \n COMPRAR";
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 5){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "1000$ \n COMPRAR";
+		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "600$ \n COMPRAR";
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 6){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "NIVEL MAX!";
@@ -172,37 +172,37 @@ function mejoragiro(){
 	var nivel = PlayerPrefs.GetInt("nivel_giro");
 	
 	if(nivel == 1){
-		if(dinero >= 50){
+		if(dinero >= 20){
 			PlayerPrefs.SetInt("nivel_giro", 2);
-			dinero = dinero - 50;
+			dinero = dinero - 20;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 2){
-		if(dinero >= 150){
+		if(dinero >= 25){
 			PlayerPrefs.SetInt("nivel_giro", 3);
-			dinero = dinero - 150;
+			dinero = dinero - 25;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 3){
-		if(dinero >= 350){
+		if(dinero >= 60){
 			PlayerPrefs.SetInt("nivel_giro", 4);
-			dinero = dinero - 350;
+			dinero = dinero - 60;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 4){
-		if(dinero >= 600){
+		if(dinero >= 100){
 			PlayerPrefs.SetInt("nivel_giro", 5);
-			dinero = dinero - 600;
+			dinero = dinero - 100;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
 	if(nivel == 5){
-		if(dinero >= 1000){
+		if(dinero >= 600){
 			PlayerPrefs.SetInt("nivel_giro", 6);
-			dinero = dinero - 1000;
+			dinero = dinero - 600;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
