@@ -881,6 +881,8 @@ MonoBehaviour:
   preset2: {fileID: 170368, guid: 089479c745e887b4292cbccbe92e6325, type: 2}
   preset3: {fileID: 157620, guid: 3073791f04192e1468f7dcb3b4d36401, type: 2}
   preset4: {fileID: 176976, guid: f950dc411e6d2c040bc7caf4637dc5ea, type: 2}
+  preset5: {fileID: 187026, guid: 3611d2b7cb8d98148b62392f3e5803e1, type: 2}
+  preset6: {fileID: 137514, guid: 23cdf58889d233846b545c411189126b, type: 2}
 --- !u!114 &1461265075
 MonoBehaviour:
   m_ObjectHideFlags: 0
