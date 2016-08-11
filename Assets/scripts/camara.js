@@ -46,11 +46,11 @@ function Update () {
 		this.transform.LookAt(PLAYER.transform);
 		this.transform.Translate(Vector3(i, 0, 0), Space.World);
 		i = Mathf.Lerp(i, 0.23, 2 * Time.deltaTime);
-		this.GetComponent(DepthOfField).enabled = true;
-		this.GetComponent(DepthOfField).aperture = this.GetComponent(DepthOfField).aperture + 0.02;
+	//	this.GetComponent(DepthOfField).enabled = true;
+	//	this.GetComponent(DepthOfField).aperture = this.GetComponent(DepthOfField).aperture + 0.02;
 	}else{
 		this.GetComponent(DepthOfField).enabled = false;
-		this.GetComponent(DepthOfField).aperture = 0.0;
+	//	this.GetComponent(DepthOfField).aperture = 0.0;
 	}
 }
 
