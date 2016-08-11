@@ -1,23 +1,27 @@
 ﻿#pragma strict
 
 //static var velocidad = 0.27;
-static var velocidad = 0.08;
+static var velocidad = 6.0;
 static var mover : boolean = true;
 var colores : Color;
+
 private var epileptic = false;
 
 function Start () {
 color();
 mover = true;
 print(colores);
-velocidad = 0.08;
+velocidad = 6.0;
 
 }
 
 function Update () {
 	if(mover == true){
-		this.transform.Translate(Vector2(velocidad, 0), Space.World);
-		velocidad = velocidad * 1.00024;
+		this.transform.Translate(Vector2(velocidad * Time.deltaTime, 0), Space.World);
+		if(velocidad < 12.4){
+			velocidad = velocidad * 1.0003;
+		}
+		print(velocidad);
 	}
 	
 	var hit:RaycastHit;

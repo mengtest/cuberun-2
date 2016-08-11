@@ -233,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rand: 0
   camara: {fileID: 751903698}
+  variacionX: -37.6500015
   i: 0
   color1: {r: 1, g: 1, b: 1, a: 0}
   color2: {r: .337964922, g: .898496032, b: .977941155, a: 0}
@@ -363,7 +364,7 @@ Transform:
   m_PrefabParentObject: {fileID: 469230, guid: 32ec9fd435da4314d97ee744b8b0c389, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457450497}
-  m_LocalRotation: {x: -1.86206073e-08, y: .412993193, z: 5.32264822e-11, w: .910734117}
+  m_LocalRotation: {x: -1.85934841e-08, y: .459062099, z: 1.00613418e-09, w: .888404191}
   m_LocalPosition: {x: 21.2999992, y: 33, z: 5.50000048}
   m_LocalScale: {x: .288400948, y: 2.32500029, z: 63.3585472}
   m_Children: []
@@ -959,7 +960,7 @@ TrailRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461265072}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:

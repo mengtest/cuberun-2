@@ -7,9 +7,13 @@ var shopbtn : GameObject;
 var setingbtn : GameObject;
 var tiendaGroup : GameObject;
 var ajustesGroup : GameObject;
+var sliderBorrado : GameObject;
 
 function Update(){
 	dineroYRecord.GetComponent(Text).text = "Tienes " + PlayerPrefs.GetInt("dinero") + " galletas y tu record es " + PlayerPrefs.GetInt("record");
+}
+function Start(){
+	sliderBorrado.GetComponent(Slider).value = PlayerPrefs.GetFloat("tiempo_borrado");
 }
 
 function seting(){
@@ -24,6 +28,8 @@ function seting(){
 		playbtn.GetComponent(Animation).Play("play_in");
 		shopbtn.GetComponent(Animation).Play("shop_in");
 		setingbtn.GetComponent(Animation).Play("seting_in");
+		PlayerPrefs.SetFloat("tiempo_borrado", sliderBorrado.GetComponent(Slider).value);
+		print(PlayerPrefs.GetFloat("tiempo_borrado"));
 		ajustesGroup.SetActive(false);
 	}
 }

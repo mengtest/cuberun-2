@@ -29,16 +29,16 @@ function Update () {
 	if(tutorialMode == false){
 		var velocidad = Cube.velocidad;
 	}else{
-		velocidad = 0.17;
+		velocidad = 6;
 	}
 	var mover = Cube.mover;
 	
 	if(mover == true){
-		this.transform.Translate(Vector2(velocidad, 0), Space.World);
+		this.transform.Translate(Vector2(velocidad * Time.deltaTime, 0), Space.World);
 		//this.transform.Translate(Vector3(0.002,0.005,-0.0051));
-		if(this.transform.position.y >= 53){
+		if(this.transform.position.y >= 56){
 		}else{
-			this.transform.Translate(Vector3(0.0005666,0.0016666,-0.0026));
+			this.transform.Translate(Vector3(0.0005466,0.0012666,-0.0022));
 		}
 	}
 	

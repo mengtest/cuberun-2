@@ -3,8 +3,10 @@
 var rand : int;
 static var epileptic = false;
 var epileptic2 = false;
+private var tiempoBorrado = 0.0;
 
 function Start(){
+	tiempoBorrado = PlayerPrefs.GetFloat("tiempo_borrado");
 	/*rand = Random.Range(0, 10);
 	if(rand == 0){
 		GetComponent(Renderer).material.color = Color.green;
@@ -48,7 +50,7 @@ function waitepileptic(){
 }
 
 function borrame(){
-	yield WaitForSeconds(30);
+	yield WaitForSeconds(tiempoBorrado);
 	Destroy(this.gameObject);
 }
 
