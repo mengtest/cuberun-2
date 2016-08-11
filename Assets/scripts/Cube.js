@@ -16,6 +16,9 @@ velocidad = 6.0;
 }
 
 function Update () {
+if(Input.GetKey(KeyCode.T)){
+	
+}
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad * Time.deltaTime, 0), Space.World);
 		if(velocidad < 12.4){

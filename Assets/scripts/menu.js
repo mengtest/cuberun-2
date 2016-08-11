@@ -13,13 +13,14 @@ var sliderBorrado : GameObject;
 function Update(){
 	dineroYRecord.GetComponent(Text).text = "Tienes " + PlayerPrefs.GetInt("dinero") + " galletas y tu record es " + PlayerPrefs.GetInt("record");
 	
-	if(Input.GetKey(KeyCode.Escape) && tiendaGroup.active == true){
-		shop();
-	}
 	if(Input.GetKey(KeyCode.Escape) && tiendaGroup.active == false && ajustesGroup.active == false){
 		salirMSG.SetActive(true);
 		salirMSG.GetComponent(Animation).Play();
 	}
+	if(Input.GetKey(KeyCode.Escape) && tiendaGroup.active == true){
+		shop();
+	}
+	
 }
 function salir(){	//Funcion al pulsar "SI" en el mensaje que aparece al pULSAR ATRAS.
 	Application.Quit();

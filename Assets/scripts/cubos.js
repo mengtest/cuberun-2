@@ -7,7 +7,7 @@ private var tiempoBorrado = 0.0;
 
 function Start(){
 	tiempoBorrado = PlayerPrefs.GetFloat("tiempo_borrado");
-	if(tiempoBorrado > 100){
+	if(tiempoBorrado < 10){
 		PlayerPrefs.SetFloat("tiempo_borrado", 30);
 		tiempoBorrado = 30;
 	}

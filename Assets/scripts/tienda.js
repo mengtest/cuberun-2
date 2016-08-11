@@ -145,7 +145,7 @@ function comprarousar(objeto : GameObject){
 		if(objeto.name == "color_red"){
 			if(dinero >= 60){
 				PlayerPrefs.SetInt("color_red", 1);
-				btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
+				btnRed.transform.GetChild(0).GetComponent(Text).text = "USAR";
 				dinero = dinero - 60;
 				PlayerPrefs.SetInt("dinero", dinero);
 			}
