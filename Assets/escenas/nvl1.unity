@@ -510,9 +510,9 @@ MonoBehaviour:
   visualizeFocus: 0
   focalLength: -103.239998
   focalSize: 0
-  aperture: 54.0400009
+  aperture: .200000003
   focalTransform: {fileID: 0}
-  maxBlurSize: 4.0999999
+  maxBlurSize: .100000001
   highResolution: 0
   blurType: 0
   blurSampleCount: 0
