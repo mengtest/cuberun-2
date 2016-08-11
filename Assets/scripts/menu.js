@@ -7,10 +7,25 @@ var shopbtn : GameObject;
 var setingbtn : GameObject;
 var tiendaGroup : GameObject;
 var ajustesGroup : GameObject;
+var salirMSG : GameObject;
 var sliderBorrado : GameObject;
 
 function Update(){
 	dineroYRecord.GetComponent(Text).text = "Tienes " + PlayerPrefs.GetInt("dinero") + " galletas y tu record es " + PlayerPrefs.GetInt("record");
+	
+	if(Input.GetKey(KeyCode.Escape) && tiendaGroup.active == true){
+		shop();
+	}
+	if(Input.GetKey(KeyCode.Escape) && tiendaGroup.active == false && ajustesGroup.active == false){
+		salirMSG.SetActive(true);
+		salirMSG.GetComponent(Animation).Play();
+	}
+}
+function salir(){	//Funcion al pulsar "SI" en el mensaje que aparece al pULSAR ATRAS.
+	Application.Quit();
+}
+function nosalir(){		//Funcion al pulsar "NO" en el mensaje que aparece al pULSAR ATRAS.
+	salirMSG.SetActive(false);
 }
 function Start(){
 	sliderBorrado.GetComponent(Slider).value = PlayerPrefs.GetFloat("tiempo_borrado");

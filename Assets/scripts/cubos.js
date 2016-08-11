@@ -7,6 +7,10 @@ private var tiempoBorrado = 0.0;
 
 function Start(){
 	tiempoBorrado = PlayerPrefs.GetFloat("tiempo_borrado");
+	if(tiempoBorrado > 100){
+		PlayerPrefs.SetFloat("tiempo_borrado", 30);
+		tiempoBorrado = 30;
+	}
 	/*rand = Random.Range(0, 10);
 	if(rand == 0){
 		GetComponent(Renderer).material.color = Color.green;

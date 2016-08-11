@@ -28,8 +28,7 @@ function OnTriggerEnter(col : Collider){
 		//punto(col);
 	}
 }
-function mostrar(col : Collider){
-	
+function mostrar(col : Collider){	
 	
 	yield WaitForSeconds(1);
 	col.GetComponent(Renderer).enabled = true;
