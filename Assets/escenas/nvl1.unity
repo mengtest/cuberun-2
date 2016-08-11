@@ -233,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rand: 0
   camara: {fileID: 751903698}
-  variacionX: -37.6500015
+  variacionX: -37.3899994
   i: 0
   color1: {r: 1, g: 1, b: 1, a: 0}
   color2: {r: .337964922, g: .898496032, b: .977941155, a: 0}
