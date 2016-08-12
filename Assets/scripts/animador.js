@@ -6,7 +6,7 @@ var variacionX = -36.9;
 var i = 0.0;
 
 private var color = 1;
-private var restantecolor = 240;
+private var restantecolor = 200;
 var color1 : Color;
 var color2 : Color;
 var color3 : Color;
@@ -73,7 +73,7 @@ function colorear (col: Collider){
 }
 
 function miniup(col : Collider){
-	yield WaitForSeconds(Random.Range(2.2, 5));
+	yield WaitForSeconds(Random.Range(2.5, 5));
 	col.GetComponent(Animation).Play("miniup");
 }
 

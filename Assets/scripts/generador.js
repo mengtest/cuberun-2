@@ -10,6 +10,10 @@ var preset5 : GameObject;
 var preset6 : GameObject;
 var preset7 : GameObject;
 var preset8 : GameObject;
+var preset9 : GameObject;
+var preset10 : GameObject;
+var preset11 : GameObject;
+var preset12 : GameObject;
 
 private var i = 70;
 private var X = 0;
@@ -28,7 +32,7 @@ function Update () {
 
 function generar(){
 	
-	var rand = Random.Range(1, 9);
+	var rand = Random.Range(1, 13);
 	var gene : GameObject;
 	
 		if(rand == 1){
@@ -54,6 +58,18 @@ function generar(){
 		}
 		if(rand == 8){
 		gene = preset8;
+		}
+		if(rand == 9){
+		gene = preset9;
+		}
+		if(rand == 10){
+		gene = preset10;
+		}
+		if(rand == 11){
+		gene = preset11;
+		}
+		if(rand == 12){
+		gene = preset12;
 		}
 	Instantiate(gene, new Vector3(X, 46.5, variatorZ), Quaternion.identity);
 	X = X + 40;
