@@ -6,6 +6,7 @@ var MusicSource : GameObject;
 var SoundSource : GameObject;
 var end = false;
 var tutorialMode = false;
+//var playNvl: Component;
 
 function Start () {
 	Cube.mover = true;
@@ -56,4 +57,5 @@ function Update () {
 
 function fin(){
 	end = true;
+//	this.playNvl.fin(puntuaciones.puntos);
 }

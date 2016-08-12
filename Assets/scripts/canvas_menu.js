@@ -1,5 +1,4 @@
-﻿import UnityEngine.UI;
-
+﻿
 
 var informacion : GameObject;
 var objetosPausa : GameObject;

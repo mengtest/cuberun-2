@@ -152,10 +152,10 @@ function comprarousar(objeto : GameObject){
 			}
 		}
 		if(objeto.name == "color_epileptic"){
-			if(dinero >= 500){
+			if(dinero >= 1000){
 				PlayerPrefs.SetInt("color_epileptic", 1);
-				btnBlue.transform.GetChild(0).GetComponent(Text).text = "USAR";
-				dinero = dinero - 500;
+				btnEpileptic.transform.GetChild(0).GetComponent(Text).text = "USAR";
+				dinero = dinero - 1000;
 				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
