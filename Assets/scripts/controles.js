@@ -5,33 +5,51 @@ import System.Collections.Generic;
 var jugador:GameObject;
 static var enableRight = true;
 static var enableLeft = true;
-private var velocidad = 0.085;
+private var velocidad = 4;
 
 private var i = 0.0; //lerp de las rotaciones
 
 function Start () {
+	
+	
 	if(PlayerPrefs.GetInt("nivel_giro") == 1){
-		velocidad = 0.085;
+		velocidad = 3.7;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 2){
-		velocidad = 0.093;
+		velocidad = 4.5;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 3){
-		velocidad = 0.098;
+		velocidad = 5.5;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 4){
-		velocidad = 0.12;
+		velocidad = 6.5;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 5){
-		velocidad = 0.19;
+		velocidad = 8;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 6){
-		velocidad = 0.25;
+		velocidad = 12;
 	}
-
+	print(velocidad);
+	print(PlayerPrefs.GetInt("nivel_giro") );
 }
 
 function Update () {
+	//PARA LAS PRUEBAS--------------------------------------------------------------------------------
+		if(Input.GetKey(KeyCode.PageUp)){
+		PlayerPrefs.SetInt("nivel_giro", PlayerPrefs.GetInt("nivel_giro") + 1);
+		Application.LoadLevel("nvl1");
+		}
+		if(Input.GetKey(KeyCode.PageDown)){
+		PlayerPrefs.SetInt("nivel_giro", PlayerPrefs.GetInt("nivel_giro") - 1);
+		Application.LoadLevel("nvl1");
+		}
+		
+	if(Cube.mover == false){
+	enableRight = false;
+	enableLeft = false;
+	}
+
 	giro(0);
 	var hit:RaycastHit;
 	var ray:Ray =Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -40,7 +58,7 @@ function Update () {
 	if(Physics.Raycast(ray, hit, 20)){
 		if(hit.collider.transform.name == "control_derecho"){
 		if(enableRight == true){
-		jugador.transform.Translate(Vector3(0, 0, -velocidad), Space.World);
+		jugador.transform.Translate(Vector3(0, 0, -velocidad * Time.deltaTime), Space.World);
 		giro(1);	
 		}else{
 		giro(0);
@@ -48,7 +66,7 @@ function Update () {
 		
 		if(hit.collider.transform.name == "control_izquierdo"){
 		if(enableLeft == true){
-		jugador.transform.Translate(Vector3(0, 0, velocidad), Space.World);
+		jugador.transform.Translate(Vector3(0, 0, velocidad * Time.deltaTime), Space.World);
 		giro(2);	
 		}else{
 		giro(0);
@@ -59,14 +77,14 @@ function Update () {
 	//Controladores alternativos para el testeo en el ordenador.
 	if(Input.GetKey(KeyCode.RightArrow)){
 	if(enableRight == true){
-	jugador.transform.Translate(Vector3(0, 0, -velocidad), Space.World);
+	jugador.transform.Translate(Vector3(0, 0, -velocidad * Time.deltaTime), Space.World);
 	giro(1);	
 	}else{
 	giro(0);
 	}}
 	if(Input.GetKey(KeyCode.LeftArrow)){
 	if(enableLeft == true){
-	jugador.transform.Translate(Vector3(0, 0, velocidad), Space.World);
+	jugador.transform.Translate(Vector3(0, 0, velocidad * Time.deltaTime), Space.World);
 	giro(2);	
 	}else{
 	giro(0);

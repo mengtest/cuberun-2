@@ -23,7 +23,8 @@ function Update(){
 }
 
 function Start () {
-
+	//PlayerPrefs.SetInt("dinero", 696969);
+	PlayerPrefs.SetInt("nivel_giro", 0);
 	leerdatos();
 	
 }
