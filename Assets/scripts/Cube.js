@@ -47,6 +47,16 @@ function FixedUpdate () {
 			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
 		}
 	}
+	if(Physics.Raycast(Vector3(transform.position.x + 0.515, transform.position.y, transform.position.z -0.40), izquierda, hit, 0.40)){
+		if(hit.collider.transform.tag == "pared"){
+			fin();
+		}		
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
+	}
+	
 	
 
 	if(Physics.Raycast(transform.position, derecha, hit, 0.6)){
