@@ -26,10 +26,11 @@ function FixedUpdate () {
 	//Para hacer experimentos y ajustar los raycast.
 	Debug.DrawRay(transform.position, izquierda, Color.red, 4);
 	Debug.DrawRay(transform.position, derecha, Color.green, 4);
-	Debug.DrawRay(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z -0.40), Vector3(0.02, 0, 0.26), Color.blue, 0.02);
-	Debug.DrawRay(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z +0.40), Vector3(0.02, 0, -0.26), Color.cyan, 0.02);
+	Debug.DrawRay(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z -0.40), Vector3(0.5, 0, 0.26), Color.blue, 2);
+	Debug.DrawRay(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z +0.40), Vector3(0.5, 0, -0.26), Color.cyan, 2);
 	
-	if(Physics.Raycast(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z -0.40), Vector3(0.02, 0, 0.3), hit, 0.25)){
+	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z -0.40), Vector3(0.5, 0, 0.3), hit, 0.6)){
+		print("colision");
 		if(hit.collider.transform.tag == "pared"){
 			fin();
 		}		
@@ -38,7 +39,7 @@ function FixedUpdate () {
 			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
 		}
 	}
-	if(Physics.Raycast(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z +0.40), Vector3(0.02, 0, -0.3), hit, 0.25)){
+	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z +0.40), Vector3(0.5, 0, -0.3), hit, 0.6)){
 		if(hit.collider.transform.tag == "pared"){
 			fin();
 		}
