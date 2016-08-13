@@ -5,7 +5,7 @@ using GoogleMobileAds.Api;
 public class anuncioMuerte : MonoBehaviour {
 	
 	void Start () {
-	
+
 	}
 
 	public void findeljuego(){
