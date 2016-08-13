@@ -8,6 +8,8 @@ var setingbtn : GameObject;
 var tiendaGroup : GameObject;
 var ajustesGroup : GameObject;
 var salirMSG : GameObject;
+var btnRanking : GameObject;
+var btnLogros : GameObject;
 var sliderBorrado : GameObject;
 
 function Update(){
@@ -39,6 +41,8 @@ function seting(){
 		shopbtn.GetComponent(Animation).Play("shop_out");
 		setingbtn.GetComponent(Animation).Play();
 		ajustesGroup.SetActive(true);
+		btnRanking.SetActive(false);
+		btnLogros.SetActive(false);
 	}else{
 		titulo.GetComponent(Animation).Play("title_in");
 		playbtn.GetComponent(Animation).Play("play_in");
@@ -47,6 +51,8 @@ function seting(){
 		PlayerPrefs.SetFloat("tiempo_borrado", sliderBorrado.GetComponent(Slider).value);
 		print(PlayerPrefs.GetFloat("tiempo_borrado"));
 		ajustesGroup.SetActive(false);
+		btnRanking.SetActive(true);
+		btnLogros.SetActive(true);
 	}
 }
 
@@ -57,11 +63,15 @@ function shop(){
 		shopbtn.GetComponent(Animation).Play("shop_shop");
 		setingbtn.GetComponent(Animation).Play();
 		tiendaGroup.SetActive(true);
+		btnRanking.SetActive(false);
+		btnLogros.SetActive(false);
 	}else{
 		titulo.GetComponent(Animation).Play("title_in");
 		playbtn.GetComponent(Animation).Play("play_in");
 		shopbtn.GetComponent(Animation).Play("shop_shop_exit");
 		setingbtn.GetComponent(Animation).Play("seting_in");
 		tiendaGroup.SetActive(false);
+		btnRanking.SetActive(true);
+		btnLogros.SetActive(true);
 	}
 }

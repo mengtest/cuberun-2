@@ -12,7 +12,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: dropvoid
-  productName: CubeRun
+  productName: CubeRunx23
   cloudProjectId: 
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -82,7 +82,7 @@ PlayerSettings:
   xboxOneDisableKinectGpuReservation: 0
   productGUID: 6619edbfcb309de4ca0f8eb87314ea88
   AndroidBundleVersionCode: 3
-  AndroidMinSdkVersion: 9
+  AndroidMinSdkVersion: 14
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   apiCompatibilityLevel: 2
@@ -122,7 +122,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 1
   AndroidKeystoreName: C:/Users/juani/Desktop/user.keystore
-  AndroidKeyaliasName: awesomekey
+  AndroidKeyaliasName: cuberun
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 0

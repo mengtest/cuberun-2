@@ -25,8 +25,12 @@
 public static class cuberun
 {
         public const string leaderboard_ranking_cookie_ball = "CgkI7cHF8dIBEAIQAw"; // <GPGSID>
-        public const string achievement_play_the_firs_game = "CgkI7cHF8dIBEAIQAA"; // <GPGSID>
+        public const string achievement_wonderfull = "CgkI7cHF8dIBEAIQBQ"; // <GPGSID>
+        public const string achievement_pierde_la_primera_partida = "CgkI7cHF8dIBEAIQBA"; // <GPGSID>
+        public const string achievement_not_bad = "CgkI7cHF8dIBEAIQBw"; // <GPGSID>
         public const string leaderboard_highest_score = "CgkI7cHF8dIBEAIQAg"; // <GPGSID>
+        public const string achievement_juega_la_primera_partida = "CgkI7cHF8dIBEAIQAA"; // <GPGSID>
+        public const string achievement_habilita_las_galletas = "CgkI7cHF8dIBEAIQBg"; // <GPGSID>
 
 }
 

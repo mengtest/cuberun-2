@@ -57,5 +57,6 @@ function Update () {
 
 function fin(){
 	end = true;
+	GameObject.Find("PlayGames").GetComponent(tempo).anuncio();
 //	this.playNvl.fin(puntuaciones.puntos);
 }

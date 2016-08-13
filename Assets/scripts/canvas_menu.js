@@ -1,5 +1,4 @@
 ﻿
-
 var informacion : GameObject;
 var objetosPausa : GameObject;
 var pausatxt : GameObject;
