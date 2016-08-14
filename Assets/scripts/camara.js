@@ -10,6 +10,7 @@ var tutorialMode = false;
 
 function Start () {
 	Cube.mover = true;
+	//PlayerPrefs.SetInt("fin", 0);
 }
 function configload(){
 	var music = PlayerPrefs.GetInt("music");
@@ -47,9 +48,11 @@ function Update () {
 		this.transform.LookAt(PLAYER.transform);
 		this.transform.Translate(Vector3(i, 0, 0), Space.World);
 		i = Mathf.Lerp(i, 0.23, 2 * Time.deltaTime);
+		SoundSource.GetComponent(AudioSource).mute = true;
 	//	this.GetComponent(DepthOfField).enabled = true;
 	//	this.GetComponent(DepthOfField).aperture = this.GetComponent(DepthOfField).aperture + 0.02;
 	}else{
+		SoundSource.GetComponent(AudioSource).mute = false;
 		//this.GetComponent(DepthOfField).enabled = false;
 	//	this.GetComponent(DepthOfField).aperture = 0.0;
 	}
@@ -58,6 +61,7 @@ function Update () {
 function fin(){
 	end = true;
 	PlayerPrefs.SetInt("partidas_jugadas", PlayerPrefs.GetInt("partidas_jugadas") + 1);
+	//PlayerPrefs.SetInt("fin", 1);
 	//GameObject.Find("PlayGames").GetComponent(tempo).anuncio();
 //	this.playNvl.fin(puntuaciones.puntos);
 }

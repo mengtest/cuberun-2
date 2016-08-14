@@ -9,7 +9,7 @@ public class PlayMenu : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		DontDestroyOnLoad(transform.gameObject);
-		PlayGamesPlatform.DebugLogEnabled = true;
+		//PlayGamesPlatform.DebugLogEnabled = true;
 		PlayGamesPlatform.Activate();
 		Social.localUser.Authenticate((bool success) => {});
 	}

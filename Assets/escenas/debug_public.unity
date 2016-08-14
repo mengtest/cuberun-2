@@ -1492,6 +1492,7 @@ GameObject:
   - 223: {fileID: 1913667191}
   - 114: {fileID: 1913667190}
   - 114: {fileID: 1913667189}
+  - 114: {fileID: 1913667192}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1574,6 +1575,18 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1913667192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913667187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bdce4931d167c4e809ca3b8c6bea56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consola: {fileID: 2031973419}
 --- !u!1 &1933270209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1740,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024457998}
         m_MethodName: input
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1913667192}
+        m_MethodName: escribiendo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

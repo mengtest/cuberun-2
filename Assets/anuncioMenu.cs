@@ -13,7 +13,7 @@ public class anuncioMenu : MonoBehaviour {
 	string adUnitId = "unexpected_platform";
 	#endif
 	
-	private BannerView bannerView;
+	BannerView bannerView;
 
 	void Start () {
 
