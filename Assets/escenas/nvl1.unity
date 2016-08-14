@@ -109,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109693767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.2000008, y: 3.79999995, z: 2.5999999}
+  m_LocalPosition: {x: -28.7000008, y: 3.79999995, z: 2.5999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457450503}
@@ -905,7 +905,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11404518, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: mostrarIntersticial
       objectReference: {fileID: 0}
     - target: {fileID: 11453606, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -930,10 +930,10 @@ Prefab:
     - target: {fileID: 11453606, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1578962496}
     - target: {fileID: 11453606, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: mostrarIntersticial
       objectReference: {fileID: 0}
     - target: {fileID: 11404518, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -958,13 +958,17 @@ Prefab:
     - target: {fileID: 11404518, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1578962496}
     - target: {fileID: 11453606, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 175468, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11199422, guid: 6ccc60c0c43284145917517c483a04a2, type: 2}
+      propertyPath: m_PlayAutomatically
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -34,4 +34,10 @@ function escribiendo () {
 			Application.LoadLevel("menu");
 		}
 	}
+	if(consola.GetComponent(InputField).text == "I AM DEVEL0P3R BITCHS!//"){
+		if(PlayerPrefs.GetInt("ads_enabled") == 0){
+			PlayerPrefs.SetInt("ads_enabled", 1);
+			Application.LoadLevel("menu");
+		}
+	}
 }

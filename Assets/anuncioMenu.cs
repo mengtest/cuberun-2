@@ -17,12 +17,13 @@ public class anuncioMenu : MonoBehaviour {
 
 	void Start () {
 
-		// Create a 320x50 banner at the top of the screen.
-		bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
-		// Create an empty ad request.
-		AdRequest request = new AdRequest.Builder().Build();
+		if(PlayerPrefs.GetInt("ads_enabled") == 0){
+			bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
+			// Create an empty ad request.
+			AdRequest request = new AdRequest.Builder().Build();
 
-		bannerView.LoadAd(request);
+			bannerView.LoadAd(request);
+		}
 		DontDestroyOnLoad(this.gameObject);
 
 	}

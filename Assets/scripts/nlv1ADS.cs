@@ -15,19 +15,19 @@ public class nlv1ADS : MonoBehaviour {
 	InterstitialAd interstitial;
 
 	void Start () {
-		interstitial = new InterstitialAd("ca-app-pub-5148252281838435/5983205100");
-		AdRequest request = new AdRequest.Builder().Build();
-		// Load the interstitial with the request.
-		interstitial.LoadAd(request);
+		if(PlayerPrefs.GetInt("ads_enabled") == 0){
+			interstitial = new InterstitialAd("ca-app-pub-5148252281838435/5983205100");
+			AdRequest request = new AdRequest.Builder().Build();
+			// Load the interstitial with the request.
+			interstitial.LoadAd(request);
+		}
 	}
 
 	public void mostrarIntersticial(){
 
-		print ("instersticial");
 		if (interstitial.IsLoaded()) {
 			interstitial.Show();
 		}	
-			
 	}
 }
  
