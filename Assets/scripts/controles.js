@@ -13,25 +13,18 @@ function Start () {
 	
 	
 	if(PlayerPrefs.GetInt("nivel_giro") == 1){
-		velocidad = 3.7;
+		velocidad = 6;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 2){
-		velocidad = 4.5;
+		velocidad = 8.5;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 3){
-		velocidad = 5.5;
+		velocidad = 10;
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 4){
-		velocidad = 6.5;
-	}
-	if(PlayerPrefs.GetInt("nivel_giro") == 5){
-		velocidad = 8;
-	}
-	if(PlayerPrefs.GetInt("nivel_giro") == 6){
 		velocidad = 12;
 	}
-	print(velocidad);
-	print(PlayerPrefs.GetInt("nivel_giro") );
+	
 }
 
 function Update () {

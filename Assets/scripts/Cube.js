@@ -3,6 +3,7 @@
 //static var velocidad = 0.27;
 static var velocidad = 6.0;
 static var mover : boolean = true;
+var materialDeveloper : Material;
 var colores : Color;
 
 private var epileptic = false;
@@ -30,7 +31,7 @@ function FixedUpdate () {
 	Debug.DrawRay(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z +0.40), Vector3(0.5, 0, -0.26), Color.cyan, 2);
 	
 	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z -0.40), Vector3(0.5, 0, 0.3), hit, 0.6)){
-		print("colision");
+		
 		if(hit.collider.transform.tag == "pared"){
 			fin();
 		}		
@@ -88,6 +89,11 @@ function Update () {
 if(Input.GetKey(KeyCode.T)){
 	
 }
+if(velocidad >= 8){
+	this.GetComponent(TrailRenderer).enabled = true;
+}else{
+	this.GetComponent(TrailRenderer).enabled = false;
+}
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad * Time.deltaTime, 0), Space.World);
 		if(velocidad < 12.4){
@@ -108,6 +114,9 @@ if(Input.GetKey(KeyCode.T)){
 
 function color(){
 	
+	if(PlayerPrefs.GetString("coloruse") == "color_developer"){
+		this.GetComponent(Renderer).material = materialDeveloper;
+	}
 	if(PlayerPrefs.GetString("coloruse") == "color_white"){
 		this.GetComponent(Renderer).material.color = Color.white;
 	}

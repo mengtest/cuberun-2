@@ -11,6 +11,10 @@ function escribiendo () {
 	if(consola.GetComponent(InputField).text == "exit"){
 			Application.LoadLevel("menu");
 	}
+	if(consola.GetComponent(InputField).text == "i am betatester"){
+			PlayerPrefs.SetString("coloruse", "color_developer");
+			Application.LoadLevel("menu");
+	}
 	
 	
 	if(consola.GetComponent(InputField).text == "cookieballs!//"){

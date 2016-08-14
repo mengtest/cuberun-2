@@ -40,25 +40,19 @@ function leerdatos(){
 		PlayerPrefs.SetInt("nivel_giro", 1);
 	}
 	if(PlayerPrefs.GetInt("nivel_giro") == 1){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "20$ \n COMPRAR";
-	}
-	if(PlayerPrefs.GetInt("nivel_giro") == 2){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "25$ \n COMPRAR";
-	}
-	if(PlayerPrefs.GetInt("nivel_giro") == 3){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "60$ \n COMPRAR";
-	}
-	if(PlayerPrefs.GetInt("nivel_giro") == 4){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "100$ \n COMPRAR";
 	}
-	if(PlayerPrefs.GetInt("nivel_giro") == 5){
+	if(PlayerPrefs.GetInt("nivel_giro") == 2){
+		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "200$ \n COMPRAR";
+	}
+	if(PlayerPrefs.GetInt("nivel_giro") == 3){
 		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "600$ \n COMPRAR";
 	}
-	if(PlayerPrefs.GetInt("nivel_giro") == 6){
-		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "NIVEL MAX!";
-		btnMejorarGiro.GetComponent(Button).interactable = false;
+	if(PlayerPrefs.GetInt("nivel_giro") == 4){
+		btnMejorarGiro.transform.GetChild(0).GetComponent(Text).text = "NIVEL MAX";
 	}
-	txtNivelGiro.GetComponent(Text).text = "Nivel " + PlayerPrefs.GetInt("nivel_giro") + "/6";
+	
+	txtNivelGiro.GetComponent(Text).text = "Nivel " + PlayerPrefs.GetInt("nivel_giro") + "/4";
 	
 	//SETEO DE LOS BOTONES DE COMPRAR LOS COLORES DEL PERSONAJE. ---------------------------------------
 	if(PlayerPrefs.GetInt("color_white") == 1){
@@ -173,36 +167,22 @@ function mejoragiro(){
 	var nivel = PlayerPrefs.GetInt("nivel_giro");
 	
 	if(nivel == 1){
-		if(dinero >= 20){
-			PlayerPrefs.SetInt("nivel_giro", 2);
-			dinero = dinero - 20;
-			PlayerPrefs.SetInt("dinero", dinero);
-		}
-	}
-	if(nivel == 2){
-		if(dinero >= 25){
-			PlayerPrefs.SetInt("nivel_giro", 3);
-			dinero = dinero - 25;
-			PlayerPrefs.SetInt("dinero", dinero);
-		}
-	}
-	if(nivel == 3){
-		if(dinero >= 60){
-			PlayerPrefs.SetInt("nivel_giro", 4);
-			dinero = dinero - 60;
-			PlayerPrefs.SetInt("dinero", dinero);
-		}
-	}
-	if(nivel == 4){
 		if(dinero >= 100){
-			PlayerPrefs.SetInt("nivel_giro", 5);
+			PlayerPrefs.SetInt("nivel_giro", 2);
 			dinero = dinero - 100;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}
 	}
-	if(nivel == 5){
+	if(nivel == 2){
+		if(dinero >= 200){
+			PlayerPrefs.SetInt("nivel_giro", 3);
+			dinero = dinero - 200;
+			PlayerPrefs.SetInt("dinero", dinero);
+		}
+	}
+	if(nivel == 3){
 		if(dinero >= 600){
-			PlayerPrefs.SetInt("nivel_giro", 6);
+			PlayerPrefs.SetInt("nivel_giro", 4);
 			dinero = dinero - 600;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}

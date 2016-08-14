@@ -10,6 +10,7 @@ var ajustesGroup : GameObject;
 var salirMSG : GameObject;
 var btnRanking : GameObject;
 var btnLogros : GameObject;
+var ganarBtn : GameObject;
 var sliderBorrado : GameObject;
 
 function Update(){
@@ -65,6 +66,7 @@ function shop(){
 		tiendaGroup.SetActive(true);
 		btnRanking.SetActive(false);
 		btnLogros.SetActive(false);
+		ganarBtn.SetActive(false);
 	}else{
 		titulo.GetComponent(Animation).Play("title_in");
 		playbtn.GetComponent(Animation).Play("play_in");
@@ -73,5 +75,6 @@ function shop(){
 		tiendaGroup.SetActive(false);
 		btnRanking.SetActive(true);
 		btnLogros.SetActive(true);
+		ganarBtn.SetActive(true);
 	}
 }
