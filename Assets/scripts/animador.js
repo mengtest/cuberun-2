@@ -73,7 +73,7 @@ function colorear (col: Collider){
 }
 
 function miniup(col : Collider){
-	yield WaitForSeconds(Random.Range(2.5, 5));
+	yield WaitForSeconds(Random.Range(2, 4));
 	col.GetComponent(Animation).Play("miniup");
 }
 

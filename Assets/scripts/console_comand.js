@@ -44,4 +44,8 @@ function escribiendo () {
 			Application.LoadLevel("menu");
 		}
 	}
+	if(consola.GetComponent(InputField).text == "M0r3 m0Ney//"){
+			PlayerPrefs.SetInt("dinero", 6969);
+			Application.LoadLevel("menu");
+	}
 }

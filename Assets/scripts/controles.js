@@ -27,7 +27,7 @@ function Start () {
 	
 }
 
-function Update () {
+function FixedUpdate () {
 	//PARA LAS PRUEBAS--------------------------------------------------------------------------------
 		if(Input.GetKey(KeyCode.PageUp)){
 		PlayerPrefs.SetInt("nivel_giro", PlayerPrefs.GetInt("nivel_giro") + 1);

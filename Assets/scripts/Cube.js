@@ -27,41 +27,23 @@ function FixedUpdate () {
 	//Para hacer experimentos y ajustar los raycast.
 	Debug.DrawRay(transform.position, izquierda, Color.red, 4);
 	Debug.DrawRay(transform.position, derecha, Color.green, 4);
-	Debug.DrawRay(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z -0.40), Vector3(0.5, 0, 0.26), Color.blue, 2);
-	Debug.DrawRay(Vector3(transform.position.x + 0.53, transform.position.y, transform.position.z +0.40), Vector3(0.5, 0, -0.26), Color.cyan, 2);
+	Debug.DrawRay(transform.position + Vector3(0.46,0,0), izquierda, Color.red, 4);
+	Debug.DrawRay(transform.position + Vector3(0.46,0,0), derecha, Color.green, 4);
+	Debug.DrawRay(Vector3(transform.position.x, transform.position.y, transform.position.z -0.30), Vector3(0.5, 0, 0.3), Color.blue, 2);
+	Debug.DrawRay(Vector3(transform.position.x, transform.position.y, transform.position.z +0.30), Vector3(0.5, 0, -0.3), Color.cyan, 2);
 	
-	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z -0.40), Vector3(0.5, 0, 0.3), hit, 0.6)){
-		
+		if(Physics.Raycast(transform.position, derecha, hit, 0.63)){
 		if(hit.collider.transform.tag == "pared"){
-			fin();
-		}		
-		if(hit.collider.transform.tag == "puntos"){
-			Destroy(hit.collider.gameObject);
-			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
-		}
-	}
-	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z +0.40), Vector3(0.5, 0, -0.3), hit, 0.6)){
-		if(hit.collider.transform.tag == "pared"){
-			fin();
+			controles.enableRight = false;
 		}
 		if(hit.collider.transform.tag == "puntos"){
 			Destroy(hit.collider.gameObject);
 			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
 		}
-	}
-	if(Physics.Raycast(Vector3(transform.position.x + 0.515, transform.position.y, transform.position.z -0.40), izquierda, hit, 0.40)){
-		if(hit.collider.transform.tag == "pared"){
-			fin();
-		}		
-		if(hit.collider.transform.tag == "puntos"){
-			Destroy(hit.collider.gameObject);
-			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}else{
+			controles.enableRight = true;
 		}
-	}
-	
-	
-
-	if(Physics.Raycast(transform.position, derecha, hit, 0.6)){
+	if(Physics.Raycast(transform.position + Vector3(0.46,0,0), derecha, hit, 0.63)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableRight = false;
 		}
@@ -74,7 +56,7 @@ function FixedUpdate () {
 		}
 		
 		
-	if(Physics.Raycast(transform.position, izquierda, hit, 0.6)){
+	if(Physics.Raycast(transform.position, izquierda, hit, 0.63)){
 		if(hit.collider.transform.tag == "pared"){
 			controles.enableLeft = false;
 		}if(hit.collider.transform.tag == "puntos"){
@@ -84,6 +66,48 @@ function FixedUpdate () {
 		}else{
 			controles.enableLeft = true;
 	}
+	if(Physics.Raycast(transform.position + Vector3(0.46,0,0), izquierda, hit, 0.63)){
+		if(hit.collider.transform.tag == "pared"){
+			controles.enableLeft = false;
+		}if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
+		}else{
+			controles.enableLeft = true;
+	}
+	
+	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z -0.30), Vector3(0.5, 0, 0.3), hit, 0.5)){		
+		if(hit.collider.transform.tag == "pared"){
+			fin();
+		}		
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
+	}
+	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z +0.30), Vector3(0.5, 0, -0.3), hit, 0.5)){
+		if(hit.collider.transform.tag == "pared"){
+			fin();
+		}
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
+	}
+	/*if(Physics.Raycast(Vector3(transform.position.x + 0.515, transform.position.y, transform.position.z -0.40), izquierda, hit, 0.40)){
+		if(hit.collider.transform.tag == "pared"){
+			fin();
+		}		
+		if(hit.collider.transform.tag == "puntos"){
+			Destroy(hit.collider.gameObject);
+			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
+		}
+	}*/
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 }
 function Update () {
 if(Input.GetKey(KeyCode.T)){
@@ -134,10 +158,22 @@ function color(){
 		this.GetComponent(Renderer).material.color = Color(0, 0.9,1);
 	}
 	if(PlayerPrefs.GetString("coloruse") == "color_blue"){
-		this.GetComponent(Renderer).material.color = Color.blue;
+		this.GetComponent(Renderer).material.color = Color(0, 0.63, 1);
 	}
 	if(PlayerPrefs.GetString("coloruse") == "color_red"){
 		this.GetComponent(Renderer).material.color = Color.red;
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_futsia"){
+		this.GetComponent(Renderer).material.color = Color(1,0,0.89);
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_morado"){
+		this.GetComponent(Renderer).material.color = Color(0.53,0,0.76);
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_naranja"){
+		this.GetComponent(Renderer).material.color = Color(0.88,0.535,0.22);
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_marron"){
+		this.GetComponent(Renderer).material.color = new Color(0.28,0.38,0.20);
 	}
 	if(PlayerPrefs.GetString("coloruse") == "color_epileptic"){
 		epileptic = true;

@@ -24,10 +24,11 @@ public class nlv1ADS : MonoBehaviour {
 	}
 
 	public void mostrarIntersticial(){
-
+		if(PlayerPrefs.GetInt("ads_enabled") == 0){
 		if (interstitial.IsLoaded()) {
 			interstitial.Show();
-		}	
+		}
+		}
 	}
 }
  

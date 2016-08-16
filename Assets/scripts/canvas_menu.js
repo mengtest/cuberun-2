@@ -8,6 +8,7 @@ var ajusteGroup : GameObject;
 var ajusteBackground : GameObject;
 var btnConfigMusica : GameObject;
 var btnConfigSonido : GameObject;
+var btnConfigParticulas : GameObject;
 var FIN_canvas : GameObject;
 
 function iniciar (){
@@ -125,4 +126,14 @@ function configsonido(){
 		btnConfigSonido.gameObject.transform.GetChild(0).GetComponent(Text).text = "Sonidos: ON";
 	}
 	GameObject.Find("Main Camera").GetComponent(camara).configload();
+}
+
+function configparticulas(){
+	if(btnConfigParticulas.gameObject.transform.GetChild(0).GetComponent(Text).text == "Particulas: ON"){
+		PlayerPrefs.SetInt("particulas", 0);
+		btnConfigParticulas.gameObject.transform.GetChild(0).GetComponent(Text).text = "Particulas: OFF";
+	}else{
+		PlayerPrefs.SetInt("particulas", 1);
+		btnConfigParticulas.gameObject.transform.GetChild(0).GetComponent(Text).text = "Particulas: ON";
+	}
 }

@@ -8,8 +8,8 @@ private var tiempoBorrado = 0.0;
 function Start(){
 	tiempoBorrado = PlayerPrefs.GetFloat("tiempo_borrado");
 	if(tiempoBorrado < 10){
-		PlayerPrefs.SetFloat("tiempo_borrado", 30);
-		tiempoBorrado = 30;
+		PlayerPrefs.SetFloat("tiempo_borrado", 42);
+		tiempoBorrado = 42;
 	}
 	/*rand = Random.Range(0, 10);
 	if(rand == 0){

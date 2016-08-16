@@ -75,8 +75,10 @@ public class anuncioMenu : MonoBehaviour {
 	}
 
 	public void quitaradd(){
-		bannerView.Destroy();
-		bannerView.Hide();
+		if(PlayerPrefs.GetInt("ads_enabled") == 0){
+			bannerView.Destroy();
+			bannerView.Hide();
+		}
 	}
 	
 	

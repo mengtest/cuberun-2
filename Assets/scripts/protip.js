@@ -12,9 +12,10 @@ function Start () {
 	consejos[4] = "Algunas galletas en bola te daran mas de 1 galleta. Normalmente son las que mas brillan";
 	consejos[5] = "Cuando alcanzas suficiente velocidad tu cubo empezara a crear una estela tras de si.";
 	consejos[6] = "Si en el menu te aparece un boton con letras azules y lo pulsas, ganaras 10 galletas tras ver el anuncio.";
-
-	if(Random.Range(0, 10) >= 6){
-		ramdon = Random.Range(0, 7);
+	consejos[7] = "Empezaras a ver particulas cuando tu velocidad sea suficientemente alta. Puedes desactivarlas en menu > ajustes.";
+	 
+	if(Random.Range(0, 10) >= 5){
+		ramdon = Random.Range(0, 8);
 		if(ramdon == 0){
 			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[0];
 		}
@@ -35,6 +36,9 @@ function Start () {
 		}
 		if(ramdon == 6){
 			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[6];
+		}
+		if(ramdon == 7){
+			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[7];
 		}
 		
 		yield WaitForSeconds(1.2);
