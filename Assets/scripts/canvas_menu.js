@@ -13,6 +13,7 @@ var FIN_canvas : GameObject;
 
 function iniciar (){
 
+	PlayerPrefs.SetInt("partidas_jugadas", PlayerPrefs.GetInt("partidas_jugadas") + 1);
 	Application.LoadLevel("nvl1");
 	Cube.velocidad = 0.1;
 	informacion.SetActive(true);
@@ -136,4 +137,8 @@ function configparticulas(){
 		PlayerPrefs.SetInt("particulas", 1);
 		btnConfigParticulas.gameObject.transform.GetChild(0).GetComponent(Text).text = "Particulas: ON";
 	}
+}
+
+function telegram(){
+	Application.OpenURL("https://telegram.me/joinchat/DIoKQQooZQycGAaSteIuwg");
 }
