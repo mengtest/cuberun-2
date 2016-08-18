@@ -15,8 +15,8 @@ public class nlv1ADS : MonoBehaviour {
 	InterstitialAd interstitial;
 
 	void Start () {
-		if(PlayerPrefs.GetInt("ads_enabled") == 0){
-			interstitial = new InterstitialAd("ca-app-pub-5148252281838435/5983205100");
+		if(PlayerPrefs.GetInt("ads_enabled") == 0 && PlayerPrefs.GetInt("partidas__jugadas") >= 3){
+			interstitial = new InterstitialAd("ca-app-pub-5148252281838435/2192133906");
 			AdRequest request = new AdRequest.Builder().Build();
 			// Load the interstitial with the request.
 			interstitial.LoadAd(request);
@@ -24,7 +24,7 @@ public class nlv1ADS : MonoBehaviour {
 	}
 
 	public void mostrarIntersticial(){
-		if(PlayerPrefs.GetInt("ads_enabled") == 0){
+		if(PlayerPrefs.GetInt("ads_enabled") == 0 && PlayerPrefs.GetInt("partidas__jugadas") >= 3){
 		if (interstitial.IsLoaded()) {
 			interstitial.Show();
 		}

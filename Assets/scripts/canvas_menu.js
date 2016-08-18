@@ -13,7 +13,7 @@ var FIN_canvas : GameObject;
 
 function iniciar (){
 
-	PlayerPrefs.SetInt("partidas_jugadas", PlayerPrefs.GetInt("partidas_jugadas") + 1);
+	PlayerPrefs.SetInt("partidas__jugadas", PlayerPrefs.GetInt("partidas__jugadas") + 1);
 	Application.LoadLevel("nvl1");
 	Cube.velocidad = 0.1;
 	informacion.SetActive(true);

@@ -17,8 +17,10 @@ function configload(){
 	var sound = PlayerPrefs.GetInt("sound");
 	if(music == 0){
 		MusicSource.GetComponent(AudioSource).mute = true;
+		
 	}else{
 		MusicSource.GetComponent(AudioSource).mute = false;
+		
 	}
 	if(sound == 0){
 		SoundSource.GetComponent(AudioSource).mute = true;
@@ -34,6 +36,9 @@ function Update () {
 		velocidad = 6;
 	}
 	var mover = Cube.mover;
+	if(PLAYER != null){
+		this.transform.position.z = Mathf.Lerp(this.transform.position.z, PLAYER.transform.position.z /1.5 - 8.5, 4*Time.deltaTime);
+	}
 	
 	if(mover == true){
 		this.transform.Translate(Vector2(velocidad * Time.deltaTime, 0), Space.World);

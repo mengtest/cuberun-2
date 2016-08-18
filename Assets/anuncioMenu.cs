@@ -22,7 +22,7 @@ public class anuncioMenu : MonoBehaviour {
 
 	void Start () {
 
-		if(PlayerPrefs.GetInt("ads_enabled") == 0){
+		if(PlayerPrefs.GetInt("ads_enabled") == 0 && PlayerPrefs.GetInt("partidas__jugadas") >= 3){
 			if(Application.loadedLevelName == "menu"){
 			bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
 			AdRequest request = new AdRequest.Builder().Build();
@@ -70,14 +70,12 @@ public class anuncioMenu : MonoBehaviour {
 		if(Application.loadedLevelName == "menu"){
 		}else{
 			bannerView.Destroy();
-			bannerView.Hide();
 		}
 	}
 
 	public void quitaradd(){
-		if(PlayerPrefs.GetInt("ads_enabled") == 0){
+		if(PlayerPrefs.GetInt("ads_enabled") == 0 && PlayerPrefs.GetInt("partidas__jugadas") >= 3){
 			bannerView.Destroy();
-			bannerView.Hide();
 		}
 	}
 	

@@ -15,6 +15,10 @@ var color5 : Color;
 var color6 : Color;
 var color7 : Color;
 var color8 : Color;
+var color9 : Color;
+var color10 : Color;
+var color11 : Color;
+var color12 : Color;
 
 function Update(){
 	i = -camara.transform.position.z + camara.transform.position.y;
@@ -65,9 +69,21 @@ function colorear (col: Collider){
 		if(color == 8){
 			col.GetComponent(Renderer).material.color = color8;
 		}
+		if(color == 9){
+			col.GetComponent(Renderer).material.color = color9;
+		}
+		if(color == 10){
+			col.GetComponent(Renderer).material.color = color10;
+		}
+		if(color == 11){
+			col.GetComponent(Renderer).material.color = color11;
+		}
+		if(color == 12){
+			col.GetComponent(Renderer).material.color = color12;
+		}
 		restantecolor = restantecolor - 1;
 	}else{
-	color = Random.Range(1, 9);
+	color = Random.Range(1, 13);
 	restantecolor = 240;
 	}
 }

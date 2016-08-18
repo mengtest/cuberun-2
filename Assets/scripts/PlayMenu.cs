@@ -14,9 +14,10 @@ public class PlayMenu : MonoBehaviour {
 		Social.localUser.Authenticate((bool success) => {});
 	}
 	void Start (){
+		print (PlayerPrefs.GetInt("partidas__jugadas"));
 		Social.ReportScore(PlayerPrefs.GetInt("record"), "CgkI7cHF8dIBEAIQAg", (bool success) => {});
 		Social.ReportScore(PlayerPrefs.GetInt("dinero"), "CgkI7cHF8dIBEAIQAw", (bool success) => {});
-		Social.ReportScore(PlayerPrefs.GetInt("partidas_jugadas"), "CgkI7cHF8dIBEAIQCw", (bool success) => {});
+		Social.ReportScore(PlayerPrefs.GetInt("partidas__jugadas"), "CgkI7cHF8dIBEAIQCw", (bool success) => {});
 		}
 	
 	public void ranking () {
@@ -24,7 +25,7 @@ public class PlayMenu : MonoBehaviour {
 		if(Social.localUser.authenticated){
 			Social.ReportScore(PlayerPrefs.GetInt("record"), "CgkI7cHF8dIBEAIQAg", (bool success) => {});
 			Social.ReportScore(PlayerPrefs.GetInt("dinero"), "CgkI7cHF8dIBEAIQAw", (bool success) => {});
-			Social.ReportScore(PlayerPrefs.GetInt("partidas_jugadas"), "CgkI7cHF8dIBEAIQCw", (bool success) => {});
+			Social.ReportScore(PlayerPrefs.GetInt("partidas__jugadas"), "CgkI7cHF8dIBEAIQCw", (bool success) => {});
 			PlayGamesPlatform.Instance.ShowLeaderboardUI();
 		}else{
 			Social.localUser.Authenticate((bool success) => {});

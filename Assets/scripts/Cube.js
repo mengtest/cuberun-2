@@ -77,7 +77,7 @@ function FixedUpdate () {
 			controles.enableLeft = true;
 	}
 	
-	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z -0.30), Vector3(0.5, 0, 0.3), hit, 0.5)){		
+	if(Physics.Raycast(Vector3(transform.position.x + 0.2, transform.position.y, transform.position.z -0.30), Vector3(0.3, 0, 0.3), hit, 0.5)){		
 		if(hit.collider.transform.tag == "pared"){
 			fin();
 		}		
@@ -86,7 +86,7 @@ function FixedUpdate () {
 			gameObject.Find("canvas").GetComponent(puntuaciones).sumargalleta();
 		}
 	}
-	if(Physics.Raycast(Vector3(transform.position.x, transform.position.y, transform.position.z +0.30), Vector3(0.5, 0, -0.3), hit, 0.5)){
+	if(Physics.Raycast(Vector3(transform.position.x + 0.2, transform.position.y, transform.position.z +0.30), Vector3(0.3, 0, -0.3), hit, 0.5)){
 		if(hit.collider.transform.tag == "pared"){
 			fin();
 		}

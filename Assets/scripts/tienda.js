@@ -6,6 +6,7 @@ var color : Color;
 
 var txtDinero : GameObject;
 var btnMejorarGiro : GameObject;
+var btnBajarGiro : GameObject;
 var btnHabilitarGalletas : GameObject;
 var txtNivelGiro : GameObject;
 //Colores del jugador
@@ -235,10 +236,10 @@ function comprarousar(objeto : GameObject){
 			}
 		}
 		if(objeto.name == "color_epileptic"){
-			if(dinero >= 1000){
+			if(dinero >= 250){
 				PlayerPrefs.SetInt("color_epileptic", 1);
 				btnEpileptic.transform.GetChild(0).GetComponent(Text).text = "USAR";
-				dinero = dinero - 1000;
+				dinero = dinero - 250;
 				PlayerPrefs.SetInt("dinero", dinero);
 			}
 		}
@@ -315,6 +316,11 @@ function comprarousarfondo(objeto : GameObject){
 
 function mejoragiro(){
 	var nivel = PlayerPrefs.GetInt("nivel_giro");
+	if(PlayerPrefs.GetInt("nivel_giro") == 1){
+		btnBajarGiro.GetComponent(Button).interactable = false;
+	}else{
+		btnBajarGiro.GetComponent(Button).interactable = true;
+	}
 	
 	if(nivel == 1){
 		if(dinero >= 100){
@@ -336,6 +342,27 @@ function mejoragiro(){
 			dinero = dinero - 600;
 			PlayerPrefs.SetInt("dinero", dinero);
 		}
+	}
+	leerdatos();
+}
+
+function bajargiro(){
+	var nivel = PlayerPrefs.GetInt("nivel_giro");
+	
+	if(nivel == 2){
+			PlayerPrefs.SetInt("nivel_giro", 1);
+			dinero = dinero + 100;
+			PlayerPrefs.SetInt("dinero", dinero);
+	}
+	if(nivel == 3){
+			PlayerPrefs.SetInt("nivel_giro", 2);
+			dinero = dinero + 200;
+			PlayerPrefs.SetInt("dinero", dinero);
+	}
+	if(nivel == 4){
+			PlayerPrefs.SetInt("nivel_giro", 3);
+			dinero = dinero + 600;
+			PlayerPrefs.SetInt("dinero", dinero);
 	}
 	leerdatos();
 }

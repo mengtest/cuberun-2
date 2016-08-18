@@ -8,8 +8,8 @@ private var tiempoBorrado = 0.0;
 function Start(){
 	tiempoBorrado = PlayerPrefs.GetFloat("tiempo_borrado");
 	if(tiempoBorrado < 10){
-		PlayerPrefs.SetFloat("tiempo_borrado", 42);
-		tiempoBorrado = 42;
+		PlayerPrefs.SetFloat("tiempo_borrado", 30);
+		tiempoBorrado = 30;
 	}
 	borrame();
 	waitepileptic();
@@ -25,7 +25,7 @@ function waitepileptic(){
 function borrame(){
 	yield WaitForSeconds(tiempoBorrado);
 	if(GameObject.Find("canvas").transform.FindChild("pausa").transform.FindChild("objetos_pausa").gameObject.active == false){
-	yield WaitForSeconds(30);
+	yield WaitForSeconds(23);
 	Destroy(this.gameObject);
 	}else{
 	repetir();
