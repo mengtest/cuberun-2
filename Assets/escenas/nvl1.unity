@@ -2123,3 +2123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1461265072}
+  Zcorrectora: .275999993
