@@ -7,7 +7,7 @@ private var record : int;
 var contadorPuntos : GameObject;
 var contadorRecord : GameObject;
 var contadorGalletas : GameObject;
-private var velocidadpuntos = 1.2;
+private var velocidadpuntos = 0.9;
 private var i : int = 5;
 
 function Start(){
