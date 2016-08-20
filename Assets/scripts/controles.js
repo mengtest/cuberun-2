@@ -62,7 +62,7 @@ function FixedUpdate () {
 				entradas[0] = 1;
 			}else{
 				giro(0);
-				entradas[0] = 0;
+				
 			}
 		}
 		
@@ -78,7 +78,11 @@ function FixedUpdate () {
 		}
 	
 	}	
+	}else{
+		entradas[0] = 0;
+		entradas[1] = 0;
 	}
+	
 	//Controladores alternativos para el testeo en el ordenador.
 	if(Input.GetKey(KeyCode.RightArrow)){
 		if(enableRight == true){
@@ -129,7 +133,7 @@ function cuadricular(){
 		jugador.transform.position.z = Mathf.Lerp(jugador.transform.position.z, posicionY - Zcorrectora, 11*Time.deltaTime);
 	}
 	
-	Debug.DrawRay(Vector3(0, 31, -10.093), Vector3(100, 0, 0), Color.red, 4);
+	/*Debug.DrawRay(Vector3(0, 31, -10.093), Vector3(100, 0, 0), Color.red, 4);
 	Debug.DrawRay(Vector3(0, 31, -9.093), Vector3(100, 0, 0), Color.red, 4);
 	Debug.DrawRay(Vector3(0, 31, -8.093), Vector3(100, 0, 0), Color.red, 4);
 	Debug.DrawRay(Vector3(0, 31, -7.093), Vector3(100, 0, 0), Color.red, 4);
@@ -144,5 +148,5 @@ function cuadricular(){
 	Debug.DrawRay(Vector3(0, 31, 2.093), Vector3(100, 0, 0), Color.red, 4);
 	Debug.DrawRay(Vector3(0, 31, 3.093), Vector3(100, 0, 0), Color.red, 4);
 	Debug.DrawRay(Vector3(0, 31, 4.093), Vector3(100, 0, 0), Color.red, 4);
-	Debug.DrawRay(Vector3(0, 31, 5.093), Vector3(100, 0, 0), Color.red, 4);
+	Debug.DrawRay(Vector3(0, 31, 5.093), Vector3(100, 0, 0), Color.red, 4);*/
 }
