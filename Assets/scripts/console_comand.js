@@ -31,6 +31,13 @@ function escribiendo () {
 			Application.LoadLevel("menu");
 		}
 	}
+	if(consola.GetComponent(InputField).text == "empanalleta//"){
+		if(PlayerPrefs.GetInt("empanalleta_promotion") == 0){
+			PlayerPrefs.SetInt("dinero", PlayerPrefs.GetInt("dinero") + 50);
+			PlayerPrefs.SetInt("empanalleta_promotion", 1);
+			Application.LoadLevel("menu");
+		}
+	}
 	if(consola.GetComponent(InputField).text == "extrAcode!//"){
 		if(PlayerPrefs.GetInt("extracode_promotion") == 0){
 			PlayerPrefs.SetInt("dinero", PlayerPrefs.GetInt("dinero") + 100);
@@ -45,7 +52,7 @@ function escribiendo () {
 		}
 	}
 	if(consola.GetComponent(InputField).text == "M0r3 m0Ney//"){
-			PlayerPrefs.SetInt("dinero", 6969);
+			PlayerPrefs.SetInt("dinero", 500);
 			Application.LoadLevel("menu");
 	}
 }
