@@ -23,8 +23,13 @@ var preset18 : GameObject;
 var preset19 : GameObject;
 var preset20 : GameObject;
 
+var fases = false;
+var stagePreset : GameObject;
+
 private var i = 70;
 private var X = 0;
+private var generarfases = true;
+private var puntosfase = 9;
 
 function Start () {
 	Instantiate(lineal, new Vector3(-41, 46.5, variatorZ), Quaternion.identity);
@@ -33,8 +38,14 @@ function Start () {
 }
 
 function Update () {
-	if(GameObject.Find("Main Camera").transform.position.x + 70 > X){
+	if(GameObject.Find("Main Camera").transform.position.x + 70 > X && generarfases == true){
 		generar();
+	}
+	if(puntuaciones.puntos ==puntosfase && fases == true){
+		puntuaciones.puntos = puntuaciones.puntos +1 ;
+		generarfases = false;
+		generarfase();
+		puntosfase = puntosfase + 30;
 	}
 }
 
@@ -107,6 +118,14 @@ function generar(){
 	X = X + 40;
 	
 
+}
+
+function generarfase(){
+	Instantiate(stagePreset, new Vector3(X, 46.5, variatorZ), Quaternion.identity);
+	X = X + 40;
+	Instantiate(lineal, new Vector3(X, 46.5, variatorZ), Quaternion.identity);
+	X = X + 40;
+	generarfases = true;
 }
 
 function generadoraux(){

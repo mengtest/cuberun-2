@@ -5,6 +5,8 @@ var audio2 : AudioSource;
 var audio3 : AudioSource;
 var audio4 : AudioSource;
 
+static var fase = false;
+
 private var sonar : AudioSource;
 static var instance = 0;
 
@@ -66,6 +68,16 @@ function Update(){
 		audio2.mute = false;
 		audio3.mute = false;
 		audio4.mute = false;
+	}
+	
+	if(fase == true){
+		sonar.pitch = Mathf.Lerp(sonar.pitch, 0.8, 0.4*Time.deltaTime);
+	}else{
+		if(sonar.pitch < 0.95){
+			sonar.pitch = Mathf.Lerp(sonar.pitch, 1, 0.8*Time.deltaTime);
+		}else{
+			sonar.pitch = 1.0;
+		}
 	}
 }
 

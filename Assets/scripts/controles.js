@@ -33,7 +33,7 @@ function Start () {
 	entradas[3] = 0;
 }
 
-function FixedUpdate () {
+function Update () {
 	//PARA LAS PRUEBAS--------------------------------------------------------------------------------
 		if(Input.GetKey(KeyCode.PageUp)){
 		PlayerPrefs.SetInt("nivel_giro", PlayerPrefs.GetInt("nivel_giro") + 1);

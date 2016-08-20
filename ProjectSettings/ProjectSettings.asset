@@ -75,13 +75,13 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.dropvoid.cuberun
-  bundleVersion: 2.4
+  bundleVersion: 3
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   productGUID: 6619edbfcb309de4ca0f8eb87314ea88
-  AndroidBundleVersionCode: 11
+  AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 14
   AndroidPreferredInstallLocation: 1
   aotOptions: 

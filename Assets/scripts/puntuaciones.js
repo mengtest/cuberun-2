@@ -3,6 +3,7 @@
 static var puntos : int = 0;
 static var sumar = true;
 static var galletas = 0;
+static var fase = 1;
 private var record : int;
 var contadorPuntos : GameObject;
 var contadorRecord : GameObject;
@@ -11,6 +12,7 @@ private var velocidadpuntos = 0.9;
 private var i : int = 5;
 
 function Start(){
+	fase = 1;
 	galletas = 0;
 	record = PlayerPrefs.GetInt("record");
 	esperarpuntos();
