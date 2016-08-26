@@ -32,7 +32,7 @@ function accion(){
 	print(explotadores.length);
 	while(count < explotadores.length){
 	explotadores[count].GetComponent(Rigidbody).isKinematic = false;
-	explotadores[count].GetComponent(Rigidbody).velocity = Vector3(Random.Range(4,16),Random.Range(-4,10),Random.Range(-6,9));
+	explotadores[count].GetComponent(Rigidbody).velocity = Vector3(Random.Range(5,22),Random.Range(-7,15),Random.Range(-6,12));
 
 	count = count + 1;
 	}

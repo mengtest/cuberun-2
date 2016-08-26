@@ -666,8 +666,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: 6, y: 0}
+  m_SizeDelta: {x: -11, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &897452950
 MonoBehaviour:
@@ -684,12 +684,12 @@ MonoBehaviour:
   m_Color: {r: .367647052, g: .973833561, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -762,6 +762,72 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 945353092}
+--- !u!1 &974000262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 974000263}
+  - 222: {fileID: 974000265}
+  - 114: {fileID: 974000264}
+  m_Layer: 5
+  m_Name: codigos_promocionalestxt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &974000263
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974000262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .796170175, y: .796169758, z: .796169758}
+  m_Children: []
+  m_Father: {fileID: 1913667188}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 202, y: -34}
+  m_SizeDelta: {x: 433, y: 60}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &974000264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974000262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Codigos promocionales:'
+--- !u!222 &974000265
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974000262}
 --- !u!1 &1024457988
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +1020,8 @@ MonoBehaviour:
   preset18: {fileID: 123306, guid: ff824393d1f1339478d3e217eec87350, type: 2}
   preset19: {fileID: 124654, guid: 1a6d8b26ac5a27f43b47a9744e27f827, type: 2}
   preset20: {fileID: 122320, guid: 6d1fb6b7bd753644e965e91142ea96b0, type: 2}
+  fases: 0
+  stagePreset: {fileID: 0}
 --- !u!114 &1024457998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,7 +1527,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -177, y: -218}
+  m_AnchoredPosition: {x: -70, y: -218}
   m_SizeDelta: {x: 461, y: 502}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1722095741
@@ -1526,6 +1594,7 @@ RectTransform:
   - {fileID: 405406238}
   - {fileID: 2094651547}
   - {fileID: 1722095740}
+  - {fileID: 974000263}
   - {fileID: 2031973420}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1691,11 +1760,11 @@ RectTransform:
   m_Children:
   - {fileID: 897452949}
   m_Father: {fileID: 1913667188}
-  m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -280, y: 605}
-  m_SizeDelta: {x: 160, y: 30}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 189, y: -90}
+  m_SizeDelta: {x: 245, y: 51}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2031973421
 MonoBehaviour:
@@ -1792,7 +1861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .153925166, g: .286764681, b: .154841289, a: 1}
+  m_Color: {r: .323637575, g: .536764741, b: .325107396, a: 1}
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0

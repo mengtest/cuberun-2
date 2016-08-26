@@ -4,6 +4,8 @@
 static var velocidad = 6.0;
 static var mover : boolean = true;
 var materialDeveloper : Material;
+var materialBrian : Material;
+var materialCoronel : Material;
 var colores : Color;
 
 private var epileptic = false;
@@ -141,6 +143,14 @@ function color(){
 	if(PlayerPrefs.GetString("coloruse") == "color_developer"){
 		this.GetComponent(Renderer).material = materialDeveloper;
 	}
+	if(PlayerPrefs.GetString("coloruse") == "color_brian"){
+		this.GetComponent(Renderer).material = materialBrian;
+	}
+	if(PlayerPrefs.GetString("coloruse") == "color_coronel"){
+		this.GetComponent(Renderer).material = materialCoronel;
+	}
+	
+	
 	if(PlayerPrefs.GetString("coloruse") == "color_white"){
 		this.GetComponent(Renderer).material.color = Color.white;
 	}

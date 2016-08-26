@@ -15,6 +15,14 @@ function escribiendo () {
 			PlayerPrefs.SetString("coloruse", "color_developer");
 			Application.LoadLevel("menu");
 	}
+	if(consola.GetComponent(InputField).text == "-briangamer"){
+			PlayerPrefs.SetString("coloruse", "color_brian");
+			Application.LoadLevel("menu");
+	}
+	if(consola.GetComponent(InputField).text == "-coronel"){
+			PlayerPrefs.SetString("coloruse", "color_coronel");
+			Application.LoadLevel("menu");
+	}
 	
 	
 	if(consola.GetComponent(InputField).text == "cookieballs!//"){
@@ -24,6 +32,7 @@ function escribiendo () {
 			Application.LoadLevel("menu");
 		}
 	}
+	//Código para youtubers
 	if(consola.GetComponent(InputField).text == "JN99chanel//"){
 		if(PlayerPrefs.GetInt("jn99chanel_promotion") == 0){
 			PlayerPrefs.SetInt("dinero", PlayerPrefs.GetInt("dinero") + 50);
@@ -31,6 +40,21 @@ function escribiendo () {
 			Application.LoadLevel("menu");
 		}
 	}
+	if(consola.GetComponent(InputField).text == "coronelyt//"){
+		if(PlayerPrefs.GetInt("coronelyt") == 0){
+			PlayerPrefs.SetInt("dinero", PlayerPrefs.GetInt("dinero") + 70);
+			PlayerPrefs.SetInt("coronelyt", 1);
+			Application.LoadLevel("menu");
+		}
+	}
+	if(consola.GetComponent(InputField).text == "briangamer//"){
+		if(PlayerPrefs.GetInt("coronelyt") == 0){
+			PlayerPrefs.SetInt("dinero", PlayerPrefs.GetInt("dinero") + 100);
+			PlayerPrefs.SetInt("coronelyt", 1);
+			Application.LoadLevel("menu");
+		}
+	}
+
 	if(consola.GetComponent(InputField).text == "empanalleta//"){
 		if(PlayerPrefs.GetInt("empanalleta_promotion") == 0){
 			PlayerPrefs.SetInt("dinero", PlayerPrefs.GetInt("dinero") + 50);

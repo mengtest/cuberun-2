@@ -3562,6 +3562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialDeveloper: {fileID: 2100000, guid: b33855895b5cee74bb8a9c0ac47c6290, type: 2}
+  materialBrian: {fileID: 2100000, guid: daf2990559adb4844a2e77aabf25229e, type: 2}
+  materialCoronel: {fileID: 2100000, guid: df5885ad7ad97064c8b0b5d61f29bca0, type: 2}
   colores: {r: .0784313753, g: 0, b: .160784319, a: 1}
 --- !u!23 &1461265076
 MeshRenderer:

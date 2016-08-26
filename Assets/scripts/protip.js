@@ -13,33 +13,15 @@ function Start () {
 	consejos[5] = "Cuando alcanzas suficiente velocidad tu cubo empezara a crear una estela tras de si.";
 	consejos[6] = "Si en el menu te aparece un boton con letras azules y lo pulsas, ganaras 10 galletas tras ver el anuncio.";
 	consejos[7] = "Empezaras a ver particulas cuando tu velocidad sea suficientemente alta. Puedes desactivarlas en menu > ajustes.";
+	consejos[8] = "¿TIENES ALGUN CODIGO PROMOCIONAL? METELO EN LA CONSOLA EN AJUSTES>ENTER DEBUG_MODE!";
+	consejos[9] = "¿Eres YouTuber? Si promocionas el juego puedes obtener tu propio cubo personalizado!";
+	consejos[10] = "¿Sabias que los betatesters de CubeRun tienen una SKIN especial? Pueden acceder metiendo un codigo secreto.";
 	 
-	if(Random.Range(0, 10) >= 5){
-		ramdon = Random.Range(0, 8);
-		if(ramdon == 0){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[0];
-		}
-		if(ramdon == 1){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[1];
-		}
-		if(ramdon == 2){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[2];
-		}
-		if(ramdon == 3){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[3];
-		}
-		if(ramdon == 4){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[4];
-		}
-		if(ramdon == 5){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[5];
-		}
-		if(ramdon == 6){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[6];
-		}
-		if(ramdon == 7){
-			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[7];
-		}
+	if(Random.Range(0, 10) >= 3){
+		ramdon = Random.Range(0, 11);
+		
+			protip.transform.FindChild("protip").GetComponent(Text).text = consejos[ramdon];
+		
 		
 		yield WaitForSeconds(1.2);
 		protip.GetComponent(Animation).Play();
